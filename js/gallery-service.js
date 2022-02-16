@@ -1,16 +1,32 @@
 'use strict'
 
-// var gImgs;
-// onImgSelect – memeService.setImg() 
-var gImgIdx = 0;
-// console.log('getImg()', getImg());
+var gImgs = [{ id: 1, url: './meme-imgs/1.jpg', keywords: ['funny', 'cat'] },
+{ id: 2, url: './meme-imgs/2.jpg', keywords: ['funny', 'cat'] },
+{ id: 3, url: './meme-imgs/3.jpg', keywords: ['funny', 'cat'] },
+{ id: 4, url: './meme-imgs/4.jpg', keywords: ['funny', 'cat'] },
+{ id: 5, url: './meme-imgs/5.jpg', keywords: ['funny', 'cat'] },
+{ id: 6, url: './meme-imgs/6.jpg', keywords: ['funny', 'cat'] },
+{ id: 7, url: './meme-imgs/7.jpg', keywords: ['funny', 'cat'] },
+{ id: 8, url: './meme-imgs/8.jpg', keywords: ['funny', 'cat'] },
+{ id: 9, url: './meme-imgs/9.jpg', keywords: ['funny', 'cat'] },
+];
+
 function getImg() {
-    var imgs = gImgs
+    var imgs = gImgs;
+    console.log('imgs', imgs);
 
     return imgs
 }
 
+// gMeme.lines[0].txt = txt;
 
 // function setImg(params) {
-    
+
 // }
+
+
+
+function setImg(url) {
+    gImgs.id = url
+
+}

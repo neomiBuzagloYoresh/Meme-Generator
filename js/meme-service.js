@@ -1,17 +1,5 @@
 'use strict'
-// Add a memeService with a gMeme variable and a function getMeme(), the
-// function renderMeme() can now render that meme 
-// var gCanvas;
-// var gCtx;
 
-// gCanvas = document.getElementById('my-canvas')
-// gCtx = gCanvas.getContext('2d')
-
-var gImgs = [{ id: 1, url: './meme-imgs/1.jpg', keywords: ['funny', 'cat'] },
-{ id: 2, url: './meme-imgs/2.jpg', keywords: ['funny', 'cat'] },
-{ id: 3, url: './meme-imgs/3.jpg', keywords: ['funny', 'cat'] },
-{ id: 4, url: './meme-imgs/4.jpg', keywords: ['funny', 'cat'] },
-];
 
 
 var gMeme = {
@@ -20,9 +8,9 @@ var gMeme = {
     lines: [
         {
             txt: 'txt',
-            size: 20,
+            size: 40,
             align: 'center',
-            color: 'red'
+            color: 'black'
         }
     ]
 }

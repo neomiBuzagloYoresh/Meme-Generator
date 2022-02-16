@@ -5,12 +5,13 @@ var gCtx;
 var gCurrShape = 'text';
 var gMeme;
 // var gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
+init();
 
 function init() {
     gCanvas = document.getElementById('my-canvas')
     gCtx = gCanvas.getContext('2d')
     // drawText('try', 10, 25)
-    // renderGallery()
+
     renderMeme()
 
 }
@@ -31,7 +32,7 @@ function drawText(memeTxt, x, y) {
     gCtx.lineWidth = 2;
     gCtx.strokeStyle = 'brown';
     gCtx.fillStyle = 'black';
-    gCtx.font = '20px Arial';
+    gCtx.font = '40px Arial';
     gCtx.textAlign = 'center';
 
     gCtx.fillText(memeTxt, x, y);
@@ -57,7 +58,7 @@ function drawImg(imgId, memeTxt) {
 
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
 
-        drawText(memeTxt.txt, 200, 20);
+        drawText(memeTxt.txt, 200, 70);
 
 
     }
