@@ -12,17 +12,27 @@
   </head>
   <body onload="init()">
     <h1>Meme Generator</h1>
-
     <section class="grid-container gallery"></section>
 
     <section class="grid-container editor">
-      <input
-        type="text"
-        name="text"
-        class="text"
-        placeholder="funny?"
-        oninput=" setLineTxt()"
-      />
+      <section class="editor-tools">
+        <input
+          type="text"
+          name="text"
+          class="text"
+          placeholder="funny?"
+          oninput="onText()"
+        />
+        <label for="colors">colors</label>
+        <button>
+          <input
+            type="color"
+            class="color"
+            name="color"
+            value="#e66465"
+          />
+        </button>
+      </section>
     </section>
 
     <div class="canvas-container">
@@ -35,10 +45,10 @@
       ></canvas>
     </div>
 
-    <script src="js/editor-service.js"></script>
     <script src="js/meme-service.js"></script>
-    <script src="js/editor-controller.js"></script>
     <script src="js/meme-controller.js"></script>
+    <script src="js/gallery-service.js"></script>
+    <script src="js/gallery-controller.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
