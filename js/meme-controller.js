@@ -1,6 +1,5 @@
 'use strict'
 
-var text_title = "Overlay text";
 var gCanvas;
 var gCtx;
 var gCurrShape = 'text';
@@ -11,7 +10,7 @@ function init() {
     gCanvas = document.getElementById('my-canvas')
     gCtx = gCanvas.getContext('2d')
     // drawText('try', 10, 25)
-    renderGallery()
+    // renderGallery()
     renderMeme()
 
 }
@@ -29,8 +28,7 @@ function renderMeme() {
 }
 
 function drawText(memeTxt, x, y) {
-
-    gCtx.lineWidth = 1;
+    gCtx.lineWidth = 2;
     gCtx.strokeStyle = 'brown';
     gCtx.fillStyle = 'black';
     gCtx.font = '20px Arial';
@@ -38,10 +36,8 @@ function drawText(memeTxt, x, y) {
 
     gCtx.fillText(memeTxt, x, y);
     gCtx.strokeText(memeTxt, x, y);
-
 }
 
-// console.log('onText', onText);
 
 function onText() {
     var elTxt = document.querySelector('input').value;
@@ -51,19 +47,18 @@ function onText() {
 }
 
 
-function drawImg(imgId, currLine) {
+function drawImg(imgId, memeTxt) {
 
-    var currLine = gMeme.selectedImgId;
 
     var img = new Image()
     img.src = `./meme-imgs/${imgId}.jpg`;
-    // console.log('gCtx', gCtx);
+    console.log('gCtx', gCtx);
     img.onload = () => {
-        console.log('onload');
 
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
-        // drawText(currLine, 50, 50)
-        drawText(currLine.txt, gCanvas.width / 2, currLine.y);
+
+        drawText(memeTxt.txt, 200, 20);
+
 
     }
 }

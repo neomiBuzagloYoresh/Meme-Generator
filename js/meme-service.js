@@ -16,7 +16,6 @@ var gImgs = [{ id: 1, url: './meme-imgs/1.jpg', keywords: ['funny', 'cat'] },
 
 var gMeme = {
     selectedImgId: 1,
-
     selectedLineIdx: 0,
     lines: [
         {
@@ -29,20 +28,25 @@ var gMeme = {
 }
 
 function setLineTxt(txt) {
-    gMeme.lines[0].txt = txt
+    gMeme.lines[0].txt = txt;
+    // renderMeme();
+
 }
 
-function getImgId(imgId) {
-    const img = gImgs.find((img) => imgId === img.id)
-    return img
-}
+// function getImgId(imgId) {
+//     const img = gImgs.find((img) => imgId === img.id)
+//     return img
+// }
 
 
 function getMeme() {
     var meme = gMeme
-
     return meme;
-
 }
 
 
+// function getColor() {
+//     var color = document.querySelector('body');
+//     color.body.style.backgroundColor = 'RED';
+
+// }

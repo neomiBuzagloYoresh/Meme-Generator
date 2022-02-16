@@ -21,7 +21,7 @@
           name="text"
           class="text"
           placeholder="funny?"
-          oninput="onText()"
+          oninput="onText(this)"
         />
         <label for="colors">colors</label>
         <button>
@@ -30,6 +30,7 @@
             class="color"
             name="color"
             value="#e66465"
+            onclick="getColor()"
           />
         </button>
       </section>
