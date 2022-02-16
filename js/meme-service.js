@@ -15,7 +15,8 @@ var gImgs = [{ id: 1, url: './meme-imgs/1.jpg', keywords: ['funny', 'cat'] },
 
 
 var gMeme = {
-    selectedImgId: 5,
+    selectedImgId: 1,
+
     selectedLineIdx: 0,
     lines: [
         {
@@ -27,7 +28,14 @@ var gMeme = {
     ]
 }
 
-// setLineTxt()
+function setLineTxt(txt) {
+    gMeme.lines[0].txt = txt
+}
+
+function getImgId(imgId) {
+    const img = gImgs.find((img) => imgId === img.id)
+    return img
+}
 
 
 function getMeme() {
@@ -37,54 +45,4 @@ function getMeme() {
 
 }
 
-// function draw(ev) {
-//     const offsetX = ev.offsetX;
-//     const offsetY = ev.offsetY;
-//     // console.log(offsetX,offsetY)
-//     // const { offsetX, offsetY } = ev
-//     switch (gCurrShape) {
 
-//         case 'text':
-//             drawText('input.valeu', offsetX, offsetY);
-//             break;
-//         case 'line':
-//             drawLine(offsetX, offsetY);
-//             break;
-//     }
-// }
-
-
-
-// function onText(el) {
-//     const memeTxt = el.value
-//     setLineTxt(memeTxt)
-//     renderMeme()
-// }
-
-// function setLineTxt() {
-//     gMeme
-
-// }
-
-
-// var books = gBooks
-
-// const startIdx = gPageIdx * PAGE_SIZE
-
-// books = books.slice(startIdx, startIdx + PAGE_SIZE)
-// return books
-
-// function getCurrLineIdx() {
-
-
-// }
-
-
-// let theText = myTextInput.value;
-
-
-function addTextLine() {
-    var newLine = document.querySelector('.text').value;
-    newLine.innerText = newLine.value
-
-}
