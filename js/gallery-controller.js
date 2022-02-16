@@ -15,11 +15,13 @@ function renderGallery() {
         return `<img onclick="onImgSelect('${img.id}')" src="${img.url}" />
         
         `
-
     })
     // onImgSelect – memeService.setImg() and then renderMeme() 
+    var elCurImg = document.getElementById('my-canvas').innerHTML = strHTMLs.join('');
 
-    document.getElementById('my-canvas').innerHTML = strHTMLs.join('')
+
+    document.querySelector('.gallery').innerHTML = strHTMLs.join('')
+    console.log('imgs', imgs);
 }
 
 console.log('onImgSelect', onImgSelect);
