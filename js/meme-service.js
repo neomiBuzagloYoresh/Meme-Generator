@@ -1,8 +1,11 @@
 'use strict'
 // Add a memeService with a gMeme variable and a function getMeme(), the
 // function renderMeme() can now render that meme 
+// var gCanvas;
+// var gCtx;
 
-
+// gCanvas = document.getElementById('my-canvas')
+// gCtx = gCanvas.getContext('2d')
 
 var gImgs = [{ id: 1, url: './meme-imgs/1.jpg', keywords: ['funny', 'cat'] },
 { id: 2, url: './meme-imgs/2.jpg', keywords: ['funny', 'cat'] },
@@ -10,12 +13,13 @@ var gImgs = [{ id: 1, url: './meme-imgs/1.jpg', keywords: ['funny', 'cat'] },
 { id: 4, url: './meme-imgs/4.jpg', keywords: ['funny', 'cat'] },
 ];
 
+
 var gMeme = {
     selectedImgId: 5,
     selectedLineIdx: 0,
     lines: [
         {
-            txt: drawText(text, x, y),
+            txt: 'txt',
             size: 20,
             align: 'center',
             color: 'red'
@@ -23,14 +27,44 @@ var gMeme = {
     ]
 }
 
+// setLineTxt()
+
+
 function getMeme() {
     var meme = gMeme
-
-
 
     return meme;
 
 }
+
+// function draw(ev) {
+//     const offsetX = ev.offsetX;
+//     const offsetY = ev.offsetY;
+//     // console.log(offsetX,offsetY)
+//     // const { offsetX, offsetY } = ev
+//     switch (gCurrShape) {
+
+//         case 'text':
+//             drawText('input.valeu', offsetX, offsetY);
+//             break;
+//         case 'line':
+//             drawLine(offsetX, offsetY);
+//             break;
+//     }
+// }
+
+
+
+// function onText(el) {
+//     const memeTxt = el.value
+//     setLineTxt(memeTxt)
+//     renderMeme()
+// }
+
+// function setLineTxt() {
+//     gMeme
+
+// }
 
 
 // var books = gBooks

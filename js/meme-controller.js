@@ -3,31 +3,25 @@
 var gCanvas;
 var gCtx;
 var gCurrShape = 'text';
-
+var gMeme;
 // var gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
-
-
-
-
 
 function init() {
     gCanvas = document.getElementById('my-canvas')
     gCtx = gCanvas.getContext('2d')
-    drawText('try', 10, 25)
+    // drawText('try', 10, 25)
     renderMeme()
 
 }
 
-
 function renderMeme() {
 
-    getMeme()
-    // onAddTextLine()
+    gMeme = getMeme()
+    var memeTxt = gMeme.lines[gMeme.selectedLineIdx];
     drawImg()
-    console.log('getMeme()', getMeme());
 }
 
-function drawText(text, x, y) {
+function drawText(memeTxt, x, y) {
 
     gCtx.lineWidth = 1;
     gCtx.strokeStyle = 'brown';
@@ -37,18 +31,19 @@ function drawText(text, x, y) {
 
     gCtx.fillText(text, x, y);
     gCtx.strokeText(text, x, y);
+
 }
 
 
-function drawImg() {
+function drawImg(id) {
     var img = new Image()
-    img.src = './meme-imgs/1.jpg';
-
+    img.src = gMeme.id;
+    console.log('gCtx', gCtx);
     img.onload = () => {
         console.log('onload');
 
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
-        drawText('try', 50, 50)
+        // drawText('try', 50, 50)
 
 
     }
@@ -59,18 +54,3 @@ function drawImg() {
 //     gCurrShape = shape;
 //   }
 
-function draw(ev) {
-    const offsetX = ev.offsetX;
-    const offsetY = ev.offsetY;
-    // console.log(offsetX,offsetY)
-    // const { offsetX, offsetY } = ev
-    switch (gCurrShape) {
-
-        case 'text':
-            drawText('input.valeu', offsetX, offsetY);
-            break;
-        case 'line':
-            drawLine(offsetX, offsetY);
-            break;
-    }
-}
