@@ -58,13 +58,25 @@ function drawTextFirstLine(memeTxt, x, y) {
 
 
 function onText() {
-
-    if (condition) {
-
-    }
     var elTxt = document.querySelector('input').value;
     setLineTxt(elTxt);
-    renderMeme();
+
+    var memes = getMeme()
+    if (memes.lines[0].txt) {
+        elTxt.style.display = 'none'
+        memes.lines[1].txt
+        elTxt.style.display = 'block'
+        renderMeme();
+
+    } else {
+        memes.lines[1].txt
+        elTxt.style.display = 'none'
+        memes.lines[0].txt
+        elTxt.style.display = 'block'
+        renderMeme();
+
+    }
+
 
 }
 

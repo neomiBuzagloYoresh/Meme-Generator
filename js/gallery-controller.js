@@ -12,29 +12,26 @@ function renderGallery() {
     console.log('imgs', imgs);
     var strHTMLs = '';
     strHTMLs = imgs.map((img) => {
-        return `<img onclick="onImgSelect('${img.id}')" src="${img.url}" />
+        return `<img onclick="onImgSelect(${img.id})"  src="${img.url}" />
         
         `
     })
     // onImgSelect – memeService.setImg() and then renderMeme() 
-    var elCurImg = document.getElementById('my-canvas').innerHTML = strHTMLs.join('');
-
-
+    // document.getElementById('my-canvas').innerHTML = strHTMLs.join('');
     document.querySelector('.gallery').innerHTML = strHTMLs.join('')
     console.log('imgs', imgs);
 }
+function onImgSelect(id) {
 
-console.log('onImgSelect', onImgSelect);
-// 7. onImgSelect – memeService.setImg() and then renderMeme()
-function onImgSelect(elCurImg) {
-    var elCurImg = document.querySelector('.gallery')
-    setImg(elCurImg)
-    // curImg.style.display = 'block';
+    var elCurImg = document.getElementById('my-canvas')
+    elCurImg.style.display = 'block';
+    gMeme.selectedImgId = id
+    console.log('setImg()', elCurImg);
     renderMeme();
 }
 
 
-
+// document.querySelector('.gallery')
 // function onText() {
 //     var elTxt = document.querySelector('input').value;
 //     setLineTxt(elTxt);

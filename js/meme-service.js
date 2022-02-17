@@ -29,10 +29,10 @@ function setLineTxt(txt) {
     gMeme.lines[1].txt = txt;
 }
 
-// function getImgId(imgId) {
-//     const img = gImgs.find((img) => imgId === img.id)
-//     return img
-// }
+function getImgId(imgId) {
+    const img = gImgs.find((img) => imgId === img.id)
+    return img
+}
 
 function getMeme() {
     var meme = gMeme

@@ -2,6 +2,6 @@ body {
   background-color: beige;
 }
 
-.gallery {
-  display: block;
+.canvas-container #my-canvas {
+  display: none;
 }

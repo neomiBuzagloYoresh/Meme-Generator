@@ -18,15 +18,11 @@ function getImg() {
     return imgs
 }
 
-// gMeme.lines[0].txt = txt;
 
-// function setImg(params) {
+// function setImg() {
+//     var meme = getMeme()
+//     meme.selectedImgId = gImgs.id
+//     console.log('meme', meme);
+//     return meme
 
 // }
-
-
-
-function setImg(url) {
-    gImgs.id = url
-
-}
