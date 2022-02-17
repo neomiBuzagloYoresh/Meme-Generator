@@ -11,9 +11,10 @@
 /* .sec-nav .sec-nav-conatiner {
   height: 100%;
 } */
-/* .sec-nav .sec-nav-conatiner a {
-  /* display: flex; */
-/* height: 50px;
+
+.sec-nav .sec-nav-conatiner a {
+  display: flex;
+  height: 50px;
   width: 130px;
   margin: 0 auto;
   padding: 2px auto 0;
@@ -22,7 +23,7 @@
   flex-direction: row;
   transition: box-shadow 0.3s;
   text-align: center;
-}  */
+}
 
 .search {
   background-color: #e6dfdf;
