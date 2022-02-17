@@ -14,7 +14,10 @@
 /* COMPONENTS */
 
 @import "components/main-header.css";
-/* @import "components/main-content.css";
-@import "components/main-footer.css";
+@import "components/nav-memes.css";
+
+@import "components/gallery.css";
+
+/* 
 @import "components/screen.css";
-@import "components/article-modal.css"; */
+@import "components/article-modal.css";  */

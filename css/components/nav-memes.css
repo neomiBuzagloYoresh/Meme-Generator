@@ -1,0 +1,34 @@
+.sec-nav {
+  background-color: rgb(200, 214, 214);
+  color: #ffff;
+  box-shadow: inset 0px -6px 0 #141414;
+}
+
+.sec-nav .sec-nav-conatiner {
+  height: 100%;
+}
+
+.sec-nav .sec-nav-conatiner {
+  height: 100%;
+}
+.sec-nav .sec-nav-conatiner a {
+  display: flex;
+  height: 70px;
+  width: 130px;
+  /* margin: 0 auto;
+  padding: 2px auto 0; */
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s;
+}
+
+.search {
+  background-color: #e6dfdf;
+  /* width: 100%; */
+  height: 100%;
+  /* height: 40px;
+  width: 130px; */
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}

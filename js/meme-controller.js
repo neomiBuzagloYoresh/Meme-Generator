@@ -73,7 +73,7 @@ function drawTextFirstLine(memes, x, y) {
 
 
 function onText(elTxt) {
-    var elTxt = document.querySelector('input').value;
+    var elTxt = document.querySelector('.texts').value;
     setLineTxt(elTxt);
     console.log('elTxt', elTxt);
 
