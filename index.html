@@ -11,7 +11,23 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body onload="onInit()">
-    <h1>Meme Generator</h1>
+    <header class="main-header">
+      <div
+        class="header-container main-layout flex space-between align-center"
+      >
+        <div class="logo">Meme Generator</div>
+        <nav class="main-nav-conatiner">
+          <ul class="main-nav clean-list flex">
+            <li><a href="#"> Gallery</a></li>
+            <li><a href="#">Memes</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+        <button class="btn-menu hide" onclick="openMenu()">
+          ☰
+        </button>
+      </div>
+    </header>
     <section class="grid-container gallery"></section>
 
     <section class="grid-container editor">

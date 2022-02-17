@@ -4,7 +4,7 @@
 
 var gMeme = {
     selectedImgId: 1,
-    selectedLineIdx: 0,
+    selectedLineIdx: 1,
     lines: [
         {
             txt: 'txt1',
@@ -25,14 +25,14 @@ var gMeme = {
 
 function setLineTxt(txt) {
     gMeme.lines[0].txt = txt;
-    // renderMeme();
     gMeme.lines[1].txt = txt;
+    // renderMeme();
 }
 
-function getImgId(imgId) {
-    const img = gImgs.find((img) => imgId === img.id)
-    return img
-}
+// function getImgId(imgId) {
+//     const img = gImgs.find((img) => imgId === img.id)
+//     return img
+// }
 
 function getMeme() {
     var meme = gMeme
