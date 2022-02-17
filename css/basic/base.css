@@ -68,7 +68,7 @@ button:hover,
   padding: 60px;
   width: auto;
   margin: 0 auto;
-  display: none;
+  /* display: none; */
 }
 
 /* img {

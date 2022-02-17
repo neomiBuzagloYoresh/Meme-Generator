@@ -4,7 +4,7 @@
 
 var gMeme = {
     selectedImgId: 1,
-    selectedLineIdx: 1,
+    selectedLineIdx: 0,
     lines: [
         {
             txt: 'txt1',
@@ -24,24 +24,15 @@ var gMeme = {
 }
 
 function setLineTxt(txt) {
-    gMeme.lines[0].txt = txt;
-    gMeme.lines[1].txt = txt;
-    // renderMeme();
+    gMeme.lines[gMeme.selectedLineIdx].txt = txt;
+
 }
 
-// function getImgId(imgId) {
-//     const img = gImgs.find((img) => imgId === img.id)
-//     return img
-// }
 
 function getMeme() {
     var meme = gMeme
     return meme;
 }
-
-// 8. Phase2 – Basic line operations:
-// a. Add a color picker button
-// b. Add the button “increase/decrease” font
 
 function getColor() {
     var color = document.querySelector('.color').value;
@@ -50,7 +41,6 @@ function getColor() {
 }
 
 function setEventListeners() {
-
 
     gCanvas.addEventListener('mousedown', onDown);
     gCanvas.addEventListener('mouseup', onUp);
