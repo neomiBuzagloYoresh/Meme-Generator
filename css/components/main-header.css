@@ -1,5 +1,5 @@
 .main-header {
-  background-color: cadetblue;
+  background-color: rgb(240, 169, 17);
   color: #ffff;
   box-shadow: inset 0px -6px 0 #141414;
 }
@@ -36,7 +36,7 @@
 }
 
 .main-header .main-nav a:hover {
-  color: blue;
+  color: rgb(199, 154, 30);
 }
 
 .main-header .main-nav a:hover {
@@ -49,7 +49,7 @@
 
 .main-header a.active {
   box-shadow: inset 0px -6px 0;
-  color: blue;
+  color: rgb(199, 154, 30);
 }
 header .btn-menu {
   cursor: pointer;
@@ -57,5 +57,9 @@ header .btn-menu {
   width: 44px;
   font-size: 1.5rem;
   background-color: #474747;
+  display: none;
+}
+
+.hide {
   display: none;
 }

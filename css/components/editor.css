@@ -1,0 +1,66 @@
+.editor {
+  margin-top: 40px;
+  margin: 30px;
+  text-align: center;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  transition: left 0.5s;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  animation-duration: 0.7s;
+  animation-name: FadeIn;
+  border-radius: 7px;
+  background-color: white;
+  padding: 40px;
+  z-index: 10;
+  /* flex-direction: row-reverse;
+  justify-content: space-evenly;
+  display: none; */
+}
+
+.editor-tools {
+  padding: 20px;
+}
+
+input[type="text"] {
+  margin: auto;
+  position: relative;
+  border: none;
+  border-bottom: 2px solid rgb(15, 14, 14);
+}
+
+input[type="color"] {
+  margin: auto;
+  position: relative;
+  -webkit-appearance: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+}
+/* .color {
+  flex-direction: row;
+  /* background-color: aqua; */
+.modal button {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  border-radius: 3px;
+  align-self: center;
+}
+
+.modal button:hover {
+  background-color: var(--clr1);
+}
+/* .canvas-container {
+  width: 60vw;
+  height: 60vh;
+} */
+
+canvas {
+  left: 0px;
+  border: 1px solid black;
+  /* display: block; */
+  margin-left: 0px;
+}

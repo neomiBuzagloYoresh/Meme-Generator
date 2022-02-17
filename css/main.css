@@ -8,16 +8,15 @@
 @import "basic/base.css";
 @import "basic/layout.css";
 @import "basic/helpers.css";
-/* @import "basic/mq.css";
-@import "basic/buttons.css"; */
+@import "basic/mq.css";
+
+/* @import "basic/buttons.css";  */
 
 /* COMPONENTS */
 
 @import "components/main-header.css";
 @import "components/nav-memes.css";
-
+@import "components/editor.css";
 @import "components/gallery.css";
 
-/* 
-@import "components/screen.css";
-@import "components/article-modal.css";  */
+/* @import "components/article-modal.css";   */

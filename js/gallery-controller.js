@@ -5,6 +5,7 @@
 
 function onInit() {
     renderGallery()
+
 }
 
 function renderGallery() {
@@ -19,21 +20,23 @@ function renderGallery() {
     document.querySelector('.gallery').innerHTML = strHTMLs.join('')
 }
 function onImgSelect(id) {
-
+    var elGallrey = document.querySelector('.gallery')
     var elCurImg = document.getElementById('my-canvas')
+    elGallrey.style.display = 'none';
     elCurImg.style.display = 'block';
     gMeme.selectedImgId = id
+    openEditor()
     renderMeme();
 }
 
 
-// document.querySelector('.gallery')
-// function onText() {
-//     var elTxt = document.querySelector('input').value;
-//     setLineTxt(elTxt);
-//     renderMeme();
-
-// }
 
 
-
+function selectPage() {
+    var elGallrey = document.querySelector('.gallery')
+    var elEditor = document.querySelector('.editor')
+    elGallrey.style.display = 'block';
+    elEditor.classList.remove('hide');
+    // renderMeme()
+    renderGallery()
+}

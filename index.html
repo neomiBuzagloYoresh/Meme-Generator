@@ -18,14 +18,22 @@
         <div class="logo">Meme Generator</div>
         <nav class="main-nav-conatiner">
           <ul class="main-nav clean-list flex">
-            <li><a href="#gallery"> Gallery</a></li>
-            <li><a href="#">Memes</a></li>
+            <li>
+              <a href="#gallery" onclick=" selectPage()">
+                Gallery</a
+              >
+            </li>
+            <li>
+              <a href="#editor" onclick="openEditor()"
+                >Editor</a
+              >
+            </li>
             <li><a href="#">About</a></li>
           </ul>
         </nav>
-        <button class="btn-menu hide" onclick="openMenu()">
+        <!-- <button class="btn-menu hide" onclick="openMenu()">
           ☰
-        </button>
+        </button> -->
       </div>
     </header>
     <section class="sec-nav flex space-between">
@@ -47,8 +55,11 @@
       class="grid-container gallery grid"
     ></section>
 
-    <section class="grid-container editor flex">
-      <section class="editor-tools">
+    <section
+      id="editor"
+      class="flex-container editor main-layout"
+    >
+      <section class="editor-tools flex">
         <input
           type="text"
           name="texts"
@@ -56,23 +67,23 @@
           placeholder="funny?"
           oninput="onText(this)"
         />
+
         <label for="colors">text colors</label>
-        <button>
-          <input
-            type="color"
-            class="color"
-            name="color"
-            value="#e66465"
-            onclick="getColor()"
-          />
-        </button>
-        <button onclick="onSwitch(this)">
+
+        <input
+          type="color"
+          class="color"
+          name="color"
+          value="#ff0000"
+          onclick="getColor()"
+        />
+
+        <button onclick="onSwitch(this)" class="flex">
           switch line
         </button>
       </section>
 
       <div class="canvas-container">
-        <h3>Container</h3>
         <canvas
           id="my-canvas"
           height="450"
@@ -80,8 +91,12 @@
           style="outline: 4px solid rgb(7, 14, 7)"
         ></canvas>
       </div>
+      <div>
+        <button onclick="closeEditor(this)">Close</button>
+      </div>
     </section>
 
+    <footer>Meme Generator</footer>
     <script src="js/meme-service.js"></script>
     <script src="js/meme-controller.js"></script>
     <script src="js/gallery-service.js"></script>
