@@ -25,7 +25,7 @@ function onImgSelect(id) {
     elGallrey.style.display = 'none';
     elCurImg.style.display = 'block';
     gMeme.selectedImgId = id
-    openEditor()
+    openEditor();
     renderMeme();
 }
 

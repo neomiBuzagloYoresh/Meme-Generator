@@ -39,24 +39,20 @@ input[type="color"] {
   width: 32px;
   height: 32px;
 }
-/* .color {
-  flex-direction: row;
-  /* background-color: aqua; */
-.modal button {
+
+.editor button {
+  margin-top: 10px;
   position: relative;
   width: 150px;
   height: 50px;
   border-radius: 3px;
   align-self: center;
+  text-align: center;
 }
 
-.modal button:hover {
-  background-color: var(--clr1);
+.editor button:hover {
+  background-color: rgb(221, 192, 139);
 }
-/* .canvas-container {
-  width: 60vw;
-  height: 60vh;
-} */
 
 canvas {
   left: 0px;
