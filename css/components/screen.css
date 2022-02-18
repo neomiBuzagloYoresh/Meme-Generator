@@ -19,19 +19,66 @@ body.menu-open .main-screen {
   background-color: rgb(0 0 0 / 30%);
   cursor: pointer;
   opacity: 0;
-  /* in order to close the modal by clicking the main-screen, we should delete the ' pointer-events' property */
   pointer-events: none;
   transition: opacity 0.6s;
 }
-body.modal-open .main-screen {
-  z-index: 5;
+
+body.menu-open .main-screen {
   pointer-events: auto;
   opacity: 1;
 }
-body.modal-open .modal {
-  display: flex;
+
+/*  */
+/* .btn-menu {
+  visibility: hidden;
+} */
+
+/* .btn-modal {
+  background-color: rgb(0, 0, 0);
+  color: rgb(53, 54, 53);
+  position: fixed;
+  /* top: 50%;
+  left: 50%; */
+/* height: 400px;
+  width: 500px; 
+  padding: 20px;
+  display: none;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Lato-Regular;
+} */
+
+/* .btn-modal.show {
+  display: none;
+} */
+
+/* .btn-modal button {
+  cursor: pointer;
+
+  margin-top: 40px;
+  height: 40px;
+  width: 70px;
+  border: 2px solid rgb(81, 189, 19);
+  border-radius: 10%;
+  font-size: 1rem;
+  background-color: rgb(121, 121, 121);
+
+} */
+
+/* .btn-modal input {
+  border-bottom: 1px solid beige;
 }
 
-.hidden {
-  display: none;
-}
+.btn-modal .sumbit {
+  cursor: pointer;
+
+  margin-top: 40px;
+  height: 30px;
+  width: 70px;
+  border: 2px solid rgb(81, 189, 19);
+  border-radius: 10%;
+  font-size: 1rem;
+  background-color: rgb(121, 121, 121);
+} */

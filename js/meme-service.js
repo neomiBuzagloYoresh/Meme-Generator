@@ -23,8 +23,13 @@ var gMeme = {
 
 }
 
-function setLineTxt(txt) {
+function setLineTxt(txt, color) {
+
+
     gMeme.lines[gMeme.selectedLineIdx].txt = txt;
+
+    gMeme.lines[gMeme.selectedLineIdx].color = color;
+
 
 }
 

@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body onload="onInit()">
-    <div class="main-screen" onclick=" toggleMenu()"></div>
-    <header class="main-header">
+    <div class="main-screen  " onclick=" toggleMenu()"></div>
+    <header class="main-header   ">
       <div
-        class="header-container main-layout flex space-between align-center"
+        class=" main-layout flex  inner-header"
       >
-        <div class="logo">Meme Generator</div>
+        <div class="logo ">Meme Generator</div>
         <nav class="main-nav-conatiner">
           <ul class="main-nav clean-list flex">
             <li>
@@ -77,7 +77,7 @@
       ></canvas>
     </div>
   
-      <section class="editor-tools   grid">
+      <section class="editor-tools ">
         <div class="inputs ">
           <button class="btn" onclick="uploadImg()">
             Upload Image from Canvas
@@ -110,7 +110,8 @@
           class="color"
           name="color"
           value="#ff0000"
-          onclick="getColor()"
+          
+          onclick="getColor(this)"
         /></div>
         <!-- <label for="colors">text color 2:</label>
 

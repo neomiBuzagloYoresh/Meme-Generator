@@ -61,10 +61,11 @@ function drawEmoji() {
 
 
 
-function onText(elTxt) {
+function onText(elTxt, elColor) {
     var elTxt = document.querySelector('.texts').value;
-    setLineTxt(elTxt);
-    console.log('elTxt', elTxt);
+    var elColor = document.querySelector('.color').value;
+    setLineTxt(elTxt, elColor);
+
 
     renderMeme();
 }
@@ -121,7 +122,18 @@ function toggleMenu() {
 }
 
 
+function openModal() {
+    document.body.classList.toggle("menu-open");
+    var elModal = document.querySelector('.btn-modal');
+    elModal.classList.add('show');
+}
 
+function closeModal() {
+    var elModal = document.querySelector('.btn-modal');
+
+    elModal.classList.remove('show');
+    document.body.classList.toggle("menu-open");
+}
 
 
 
