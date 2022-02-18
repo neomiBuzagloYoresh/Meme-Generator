@@ -65,11 +65,20 @@
     ></section>
 
     <section
-      id="editor"
-      class="flex-container editor main-layout"
+      class="editor flex "
     >
-      <section class="editor-tools flex">
-        <div class="inputs main-layout">
+<div class="editor-div flex " >
+    <div class="canvas-container  ">
+      <canvas
+        id="my-canvas"
+        height="450"
+        width="450"
+        style="outline: 4px solid rgb(7, 14, 7)"
+      ></canvas>
+    </div>
+  
+      <section class="editor-tools   grid">
+        <div class="inputs ">
           <button class="btn" onclick="uploadImg()">
             Upload Image from Canvas
           </button>
@@ -77,6 +86,7 @@
           <a
             href="#"
             class="btn"
+            id="btns"
             onclick="downloadImg(this)"
             download="my-img.jpg"
             >Download as jpeg</a
@@ -92,8 +102,8 @@
           placeholder="funny?"
           oninput="onText(this)"
         />
-
-        <label for="colors">text color 1:</label>
+<div class="colors">
+        <label for="color">text color 1:</label>
 
         <input
           type="color"
@@ -101,7 +111,7 @@
           name="color"
           value="#ff0000"
           onclick="getColor()"
-        />
+        /></div>
         <!-- <label for="colors">text color 2:</label>
 
         <input
@@ -111,22 +121,15 @@
           value="#ff0000"
           onclick="getColor()"
         /> -->
-        <button onclick="onSwitch(this)" class="flex">
-          switch line
+        <button onclick="onSwitch(this)" class="switch">
+          ⇅
         </button>
+       
+          <button class="close"  onclick="closeEditor(this)">Close</button>
+       
       </section>
-
-      <div class="canvas-container">
-        <canvas
-          id="my-canvas"
-          height="450"
-          width="450"
-          style="outline: 4px solid rgb(7, 14, 7)"
-        ></canvas>
-      </div>
-      <div>
-        <button onclick="closeEditor(this)">Close</button>
-      </div>
+    </div>
+     
     </section>
 
     <footer class="main-layou">Meme Generator</footer>

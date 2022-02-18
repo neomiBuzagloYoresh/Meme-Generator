@@ -58,9 +58,9 @@ header .btn-menu {
   width: 44vh;
   font-size: 1.5rem;
   background-color: #474747;
-  /* display: none; */
-}
-
-.hide {
   display: none;
 }
+
+/* .hide {
+  display: none;
+} */

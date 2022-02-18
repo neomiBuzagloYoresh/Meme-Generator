@@ -42,7 +42,7 @@ button,
 .btn {
   cursor: pointer;
   padding: 0 1.25em;
-  line-height: 2.25;
+  /* line-height: 2.25; */
   border: 2px solid orange;
   border-radius: 2em;
   color: orange;
