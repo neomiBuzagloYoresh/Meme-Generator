@@ -19,6 +19,8 @@ function renderGallery() {
 
     document.querySelector('.gallery').innerHTML = strHTMLs.join('')
 }
+
+
 function onImgSelect(id) {
     var elGallrey = document.querySelector('.gallery')
     var elCurImg = document.getElementById('my-canvas')

@@ -19,9 +19,9 @@ var gMeme = {
             color: 'black'
         }
     ]
-
-
 }
+
+
 
 function setLineTxt(txt, color) {
 

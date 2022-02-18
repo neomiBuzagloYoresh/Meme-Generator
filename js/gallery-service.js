@@ -29,10 +29,12 @@ var gImgs = [
 
 function getImg() {
     var imgs = gImgs;
-    console.log('imgs', imgs);
+    // console.log('imgs', imgs);
 
     return imgs
 }
+
+
 
 
 
@@ -80,14 +82,14 @@ function loadImageFromInput(ev, onImageReady) {
     var reader = new FileReader()
 
     reader.onload = function (event) {
-        console.log('onload');
+        // console.log('onload');
         var img = new Image()
         // Render on canvas
         img.onload = onImageReady.bind(null, img)
         img.src = event.target.result
         gImg = img
     }
-    console.log('after');
+    // console.log('after');
     reader.readAsDataURL(ev.target.files[0])
 }
 
@@ -101,7 +103,7 @@ function uploadImg() {
     // A function to be called if request succeeds
     function onSuccess(uploadedImgUrl) {
         const encodedUploadedImgUrl = encodeURIComponent(uploadedImgUrl)
-        console.log(encodedUploadedImgUrl);
+        // console.log(encodedUploadedImgUrl);
         document.querySelector('.user-msg').innerText = `Your photo is available here: ${uploadedImgUrl}`
 
         document.querySelector('.share-container').innerHTML = `
@@ -124,7 +126,7 @@ function doUploadImg(imgDataUrl, onSuccess) {
     })
         .then(res => res.text())
         .then((url) => {
-            console.log('Got back live url:', url);
+            // console.log('Got back live url:', url);
             onSuccess(url)
         })
         .catch((err) => {

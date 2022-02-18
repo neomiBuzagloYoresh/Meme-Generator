@@ -15,23 +15,12 @@
   background-color: white;
   padding: 40px;
   z-index: 10;
-  /* flex-direction: row-reverse;
-  justify-content: space-evenly;
-  display: none; */
+  display: none;
 }
-/* 
-.editor {
-  display: flex;
-  margin: 30px;
-  text-align: center;
-  /* position: fixed; */
-/* width: 100%; */
 
 .editor-tools {
   max-width: min-content;
-  /* height: 100%; */
-  /* text-align: center; */
-  /* align-items: flex-start; */
+
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 1px;

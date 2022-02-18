@@ -25,7 +25,7 @@
               >
             </li>
             <li>
-              <a href="#editor" onclick="openEditor()"
+              <a class="editors" href="#editor" onclick="openEditor()"
                 >Editor</a
               >
             </li>
@@ -41,7 +41,7 @@
     </header>
     <section class="sec-nav flex main-layou ">
   
-
+      <button onclick="newMeme(this)" class="flexible">i'm flexible</button>
         <label for="keywords">search keywords:</label>
         <input
           name="keywords"
@@ -58,6 +58,7 @@
           <option value="israel"></option>
         </datalist>
       </nav>
+
     </section>
     <section
       id="gallery"
@@ -134,10 +135,11 @@
     </section>
 
     <footer class="main-layou">Meme Generator</footer>
+    <script src="js/memesSentences.js"></script>
     <script src="js/meme-service.js"></script>
     <script src="js/meme-controller.js"></script>
     <script src="js/gallery-service.js"></script>
     <script src="js/gallery-controller.js"></script>
-    <script src="js/main.js"></script>
+   
   </body>
 </html>

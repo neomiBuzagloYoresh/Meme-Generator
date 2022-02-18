@@ -1,11 +1,13 @@
 'use strict'
 
+var isNewMeme = false;
+var newCurrMeme;
 var gCanvas;
 var gCtx;
 var gCurrShape = 'text';
 var gMeme;
 // var gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
-init();
+init()
 
 function init() {
     gCanvas = document.getElementById('my-canvas')
@@ -15,23 +17,37 @@ function init() {
 
     renderMeme()
 }
-
-
+// getMeme()
 
 function renderMeme() {
-    var meme = getMeme()
-    var memeTxt = meme.lines[meme.selectedLineIdx];
+    if (isNewMeme) {
+        newCurrMeme = getRandomMeme()
+        console.log('newCurrMeme', newCurrMeme);
+        isNewMeme = false;
+    } else {
+        newCurrMeme = getMeme()
+    }
 
-    var memeImg = meme.selectedImgId;
+    var memeTxt = newCurrMeme.lines[newCurrMeme.selectedLineIdx];
+
+    var memeImg = newCurrMeme.selectedImgId;
     drawImg(memeImg, memeTxt)
 
     // console.log('drawImg', drawImg());
 }
 
+function newMeme() {
+    isNewMeme = true;
+    // newCurrMeme = getRandomMeme()
+
+
+    renderMeme()
+}
+
 function drawTextFirstLine(memes, x, y) {
-    var memes = getMeme()
-    console.log('memes', memes);
-    memes.lines.forEach((lines, indx) => {
+
+    // console.log('memes', memes);
+    newCurrMeme.lines.forEach((lines, indx) => {
         var newColor = getColor();
         gCtx.lineWidth = 2;
         gCtx.strokeStyle = 'black';
@@ -77,7 +93,7 @@ function drawImg(imgId, memeTxt) {
 
     var img = new Image()
     img.src = `./meme-imgs/${imgId}.jpg`;
-    console.log('gCtx', gCtx);
+    // console.log('gCtx', gCtx);
     img.onload = () => {
 
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
@@ -88,14 +104,14 @@ function drawImg(imgId, memeTxt) {
 }
 
 function onSwitch() {
-    var meme = getMeme()
-    var memeTxt = meme.lines[meme.selectedLineIdx];
 
-    if (meme.selectedLineIdx === meme.lines.length - 1) {
-        meme.selectedLineIdx = 0;
+    var memeTxt = newCurrMeme.lines[newCurrMeme.selectedLineIdx];
+
+    if (newCurrMeme.selectedLineIdx === newCurrMeme.lines.length - 1) {
+        newCurrMeme.selectedLineIdx = 0;
     } else {
-        if (meme.selectedLineIdx < meme.lines.length) {
-            meme.selectedLineIdx += 1;
+        if (newCurrMeme.selectedLineIdx < newCurrMeme.lines.length) {
+            newCurrMeme.selectedLineIdx += 1;
         }
     }
     renderMeme()
@@ -104,11 +120,13 @@ function onSwitch() {
 
 
 function closeEditor() {
-    var close = document.querySelector('.editor ');
+    var close = document.querySelector('.editor');
     close.style.display = 'none'
     // renderMeme()
 
 }
+
+
 
 function openEditor() {
     var open = document.querySelector('.editor ');
@@ -136,6 +154,81 @@ function closeModal() {
 }
 
 
+
+
+
+// console.log(getRandomMeme());
+function getRandomMeme() {
+
+    var newMeme = {
+
+        selectedImgId: getRandomInt(1, 17),
+        selectedLineIdx: 0,
+        lines: [],
+    };
+    var lineNum = getRandomInt(1, 2)
+    // console.log('lineNum', lineNum);
+    for (var i = 0; i < lineNum; i++) {
+        var senten = getRandomSenten();
+        // console.log('senten', senten);
+        newMeme.lines.push({ size: 25, txt: senten, color: getRandomTxtColor(), stroke: getRandomStrokeColor(), align: 'center' })
+        // console.log('newMeme', newMeme.lines);
+    }
+    return newMeme
+}
+
+
+function getRandomImg() {
+
+    for (var i = 0; i < gImgs.length; i++) {
+        var img = gImgs[Math.floor(Math.random() * 18)];
+        // console.log('img', img);
+    }
+    return img
+
+}
+function getRandomSenten() {
+
+    for (var i = 0; i < memesSentences.length; i++) {
+        var sen = memesSentences[Math.floor(Math.random() * 15)];
+        // console.log('sen', sen);
+    }
+    return sen
+}
+
+function getRandomTxtColor() {
+
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+
+    }
+    return color;
+}
+
+
+function getRandomStrokeColor() {
+
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+
+    }
+    return color;
+}
+
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+
+// console.log('newMeme()', newMeme());
 
 
 
