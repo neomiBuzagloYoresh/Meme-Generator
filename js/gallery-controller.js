@@ -5,7 +5,7 @@
 
 function onInit() {
     renderGallery()
-
+    // resizeCanvas()
 }
 
 function renderGallery() {
@@ -40,3 +40,12 @@ function selectPage() {
     // renderMeme()
     renderGallery()
 }
+
+
+// function onSortChange(sortBy) {
+//     setSortBy(sortBy);
+//     renderGallery()
+// }
+
+
+

@@ -24,13 +24,6 @@
   padding: 20px;
 }
 
-input[type="text"] {
-  margin: auto;
-  position: relative;
-  border: none;
-  border-bottom: 2px solid rgb(15, 14, 14);
-}
-
 input[type="color"] {
   margin: auto;
   position: relative;
@@ -59,4 +52,10 @@ canvas {
   border: 1px solid black;
   /* display: block; */
   margin-left: 0px;
+}
+
+input[type="text"] {
+  margin: auto;
+  border: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
 }

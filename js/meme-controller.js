@@ -12,8 +12,8 @@ function init() {
     gCtx = gCanvas.getContext('2d')
     // drawTextFirstLineFirstLine('try', 10, 25)
 
-    renderMeme()
 
+    renderMeme()
 }
 
 
@@ -45,6 +45,19 @@ function drawTextFirstLine(memes, x, y) {
     });
 }
 
+function drawEmoji() {
+    var glass = '🕶️';
+    var had = '⛑️';
+    var hor = '🌪️';
+    var scream = '😱';
+    var love = '♥️';
+    var qui = '🔕';
+    var x = '📣';
+    var y = '🔔';
+
+    renderMeme();
+
+}
 
 
 
@@ -106,3 +119,44 @@ function openEditor() {
 function toggleMenu() {
     document.body.classList.toggle("menu-open");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// function openMenu() {
+//     document.body.classList.add('menu-open')
+// }
+
+// function closeMenu() {
+//     document.body.classList.remove('menu-open')
+// }
+
+// function openModal() {
+//     document.body.classList.toggle('modal-open')
+// }
+
+// function closeModal() {
+//     document.body.classList.remove('modal-open')
+// }
+
+
+// function toggleMenu() {
+//     document.body.classList.toggle('menu-open');
+//     closeModal()
+//   }
+//   function toggleModal() {
+//     document.querySelector('.modal').classList.toggle('hidden');
+//     document.body.classList.toggle('modal-open');
+//   }
+//   function closeModal() {
+//     document.querySelector('.modal').classList.add('hidden');
+//     document.body.classList.remove('modal-open');
+//   }

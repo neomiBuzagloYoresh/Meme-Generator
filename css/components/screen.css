@@ -12,3 +12,26 @@ body.menu-open .main-screen {
   pointer-events: auto;
   opacity: 1;
 } */
+
+.main-screen {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(0 0 0 / 30%);
+  cursor: pointer;
+  opacity: 0;
+  /* in order to close the modal by clicking the main-screen, we should delete the ' pointer-events' property */
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+body.modal-open .main-screen {
+  z-index: 5;
+  pointer-events: auto;
+  opacity: 1;
+}
+body.modal-open .modal {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}

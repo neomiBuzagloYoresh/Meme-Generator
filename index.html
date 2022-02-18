@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body onload="onInit()">
-    <div class="main-screen" onclick="toggleMenu()"></div>
+    <div class="main-screen" onclick=" toggleMenu()"></div>
     <header class="main-header">
       <div
         class="header-container main-layout flex space-between align-center"
@@ -29,7 +29,9 @@
                 >Editor</a
               >
             </li>
-            <li><a href="#">About</a></li>
+            <li onclick="onSortChange('name')">
+              <a href="#">About</a>
+            </li>
           </ul>
         </nav>
         <button class="btn-menu" onclick="toggleMenu()">
@@ -37,18 +39,24 @@
         </button>
       </div>
     </header>
-    <section class="sec-nav flex space-between">
-      <input
-        type="text"
-        class="search main-layout"
-        placeholder="Enter search Keyword"
-      />
-      <nav class="sec-nav-conatiner main-layout flex">
-        <ul class="sec-nav clean-list flex">
-          <li><a href="#"> funny</a></li>
-          <li><a href="#">dogs</a></li>
-          <li><a href="#">books</a></li>
-        </ul>
+    <section class="sec-nav flex main-layou ">
+  
+
+        <label for="keywords">search keywords:</label>
+        <input
+          name="keywords"
+          list="keyword"
+          placeholder="Enter search Keyword"
+          id="keywords"
+        />
+
+        <datalist id="keyword">
+          <option value="political"></option>
+          <option value="love"></option>
+          <option value="baby"></option>
+          <option value="funny"></option>
+          <option value="israel"></option>
+        </datalist>
       </nav>
     </section>
     <section
@@ -61,6 +69,22 @@
       class="flex-container editor main-layout"
     >
       <section class="editor-tools flex">
+        <div class="inputs main-layout">
+          <button class="btn" onclick="uploadImg()">
+            Upload Image from Canvas
+          </button>
+
+          <a
+            href="#"
+            class="btn"
+            onclick="downloadImg(this)"
+            download="my-img.jpg"
+            >Download as jpeg</a
+          >
+          <p class="user-msg"></p>
+          <div class="share-container"></div>
+        </div>
+
         <input
           type="text"
           name="texts"
@@ -69,7 +93,7 @@
           oninput="onText(this)"
         />
 
-        <label for="colors">text colors</label>
+        <label for="colors">text color 1:</label>
 
         <input
           type="color"
@@ -78,7 +102,15 @@
           value="#ff0000"
           onclick="getColor()"
         />
+        <!-- <label for="colors">text color 2:</label>
 
+        <input
+          type="color"
+          class="colors"
+          name="color"
+          value="#ff0000"
+          onclick="getColor()"
+        /> -->
         <button onclick="onSwitch(this)" class="flex">
           switch line
         </button>
