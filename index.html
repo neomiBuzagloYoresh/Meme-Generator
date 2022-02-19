@@ -8,6 +8,7 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Meme-Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body onload="onInit()">
@@ -41,7 +42,6 @@
     </header>
     <section class="sec-nav flex main-layou ">
   
-      <button onclick="newMeme(this)" class="flexible">i'm flexible</button>
         <label for="keywords">search keywords:</label>
         <input
           name="keywords"
@@ -58,18 +58,22 @@
           <option value="israel"></option>
         </datalist>
       </nav>
-
+      <button onclick="newMeme(this)" class="flexible">i'm flexible</button>
     </section>
     <section
       id="gallery"
       class="grid-container gallery grid"
-    ></section>
+    >
+   
+
+  </section>
 
     <section
       class="editor flex "
     >
-<div class="editor-div flex " >
-    <div class="canvas-container  ">
+
+<div class="editor-div flex" >
+    <div class="canvas-container">
       <canvas
         id="my-canvas"
         height="450"
@@ -78,10 +82,10 @@
       ></canvas>
     </div>
   
-      <section class="editor-tools ">
+      <section class="editor-tools grid">
         <div class="inputs ">
           <button class="btn" onclick="uploadImg()">
-            Upload Image from Canvas
+            <a href="#" class="fa fa-facebook" ></a>
           </button>
 
           <a
@@ -90,7 +94,7 @@
             id="btns"
             onclick="downloadImg(this)"
             download="my-img.jpg"
-            >Download as jpeg</a
+            >⤓</a
           >
           <p class="user-msg"></p>
           <div class="share-container"></div>
@@ -104,25 +108,17 @@
           oninput="onText(this)"
         />
 <div class="colors">
-        <label for="color">text color 1:</label>
+        <label for="color">✎</label>
 
         <input
           type="color"
           class="color"
           name="color"
-          value="#ff0000"
+          value="#f0000"
           
           onclick="getColor(this)"
         /></div>
-        <!-- <label for="colors">text color 2:</label>
-
-        <input
-          type="color"
-          class="colors"
-          name="color"
-          value="#ff0000"
-          onclick="getColor()"
-        /> -->
+        
         <button onclick="onSwitch(this)" class="switch">
           ⇅
         </button>
@@ -134,7 +130,7 @@
      
     </section>
 
-    <footer class="main-layou">Meme Generator</footer>
+    <footer class="main-layou">©Meme Generator</footer>
     <script src="js/memesSentences.js"></script>
     <script src="js/meme-service.js"></script>
     <script src="js/meme-controller.js"></script>

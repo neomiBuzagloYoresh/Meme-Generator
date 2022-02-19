@@ -58,15 +58,26 @@
     border-bottom: solid 1px purple;
     margin: 0px;
   }
-  .card-button {
-    display: none;
-  }
-  /* .btn-menu {
+
+  header .btn-menu {
     display: block;
-    margin-left: 0px;
-  } */
-  .btn-menu {
-    visibility: visible;
+  }
+  .editor-tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    right: 0px;
+    margin: 20px;
+    padding: 20px;
+    /* grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 1fr 2fr 3fr; */
+  }
+  .inputs .btn {
+    right: 0px;
+  }
+  .switch {
+    right: 0px;
+    position: absolute;
   }
 }
 
@@ -95,9 +106,11 @@
     flex-direction: column;
   }
   .editor-tools {
-    display: inline-block;
-    flex-direction: row;
-    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    /* grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 1fr 2fr 3fr; */
   }
   .canvas-container {
     margin-top: 50px;
@@ -109,6 +122,17 @@
 
   .inputs .btn {
     padding: 3px;
+    right: 0px;
+  }
+  header .btn-menu {
+    display: block;
+  }
+  .switch {
+    display: flex;
+    right: px;
+  }
+  div .colors {
+    display: block;
   }
 }
 /* MEDIUM */
@@ -128,7 +152,7 @@
     flex-wrap: wrap;
   }
   .btn-menu {
-    display: none;
+    display: block;
   }
   /* canvas {
     height: 300px;
@@ -154,7 +178,7 @@
     display: none;
   }
   .btn-menu {
-    display: none;
+    display: block;
   }
 }
 
@@ -174,13 +198,16 @@
     height: 150px;
     width: 150px;
   } */
-  .editor-div {
+  /* .editor-div {
     flex-direction: column;
-  }
+  } */
 
   /* .editor-tools {
     display: inline-block;
     flex-direction: row;
     margin: 0px;
+  } */
+  /* footer {
+    bottom: 0px;
   } */
 }

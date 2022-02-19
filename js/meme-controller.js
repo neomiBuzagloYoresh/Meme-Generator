@@ -121,7 +121,9 @@ function onSwitch() {
 
 function closeEditor() {
     var close = document.querySelector('.editor');
+    var open = document.querySelector('.gallery ');
     close.style.display = 'none'
+    open.style.display = 'block'
     // renderMeme()
 
 }
@@ -130,7 +132,9 @@ function closeEditor() {
 
 function openEditor() {
     var open = document.querySelector('.editor ');
+    var close = document.querySelector('.gallery ');
     open.style.display = 'block'
+    close.style.display = 'none'
     // renderMeme()
     // renderImg()
 }

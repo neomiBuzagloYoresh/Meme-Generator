@@ -17,7 +17,7 @@ function renderGallery() {
         `
     })
 
-    document.querySelector('.gallery').innerHTML = strHTMLs.join('')
+    document.querySelector('.gallery').innerHTML = strHTMLs.join('');
 }
 
 
