@@ -38,11 +38,10 @@ a {
   font-size: 2.5rem;
 }
 
-button,
+/* button,
 .btn {
   cursor: pointer;
   padding: 0 1.25em;
-  /* line-height: 2.25; */
   border: 2px solid orange;
   border-radius: 2em;
   color: orange;
@@ -50,7 +49,7 @@ button,
   position: relative;
   transition: padding 0.3s;
   display: inline-block;
-}
+} */
 
 button:hover,
 .btn:hover {

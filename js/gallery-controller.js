@@ -51,3 +51,17 @@ function selectPage() {
 
 
 
+// function onSetSortBy() {
+//     const prop = document.querySelector('.keyword').value
+//     const isDesc = document.querySelector('.sort-desc').checked
+
+//     const sortBy = {}
+//     sortBy[prop] = (isDesc) ? -1 : 1;
+
+//     // Shorter Syntax:
+//     // const sortBy = {
+//     //     [prop] : (isDesc)? -1 : 1
+//     // }
+//     setCarSort(sortBy)
+//     renderCars();
+// }

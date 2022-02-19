@@ -44,18 +44,19 @@
   
         <label for="keywords">search keywords:</label>
         <input
+        type="text"
           name="keywords"
           list="keyword"
           placeholder="Enter search Keyword"
           id="keywords"
         />
 
-        <datalist id="keyword">
-          <option value="political"></option>
-          <option value="love"></option>
-          <option value="baby"></option>
-          <option value="funny"></option>
-          <option value="israel"></option>
+        <datalist  id="keyword">
+          <option value="political">political</option>
+          <option value="love">love</option>
+          <option value="baby">baby</option>
+          <option value="funny">funny</option>
+          <option value="israel">israel</option>
         </datalist>
       </nav>
       <button onclick="newMeme(this)" class="flexible">i'm flexible</button>
@@ -82,12 +83,14 @@
       ></canvas>
     </div>
   
-      <section class="editor-tools grid">
+      <section class="editor-tools grid main-layou">
         <div class="inputs ">
+        
           <button class="btn" onclick="uploadImg()">
             <a href="#" class="fa fa-facebook" ></a>
           </button>
-
+</div>
+<div class="download">
           <a
             href="#"
             class="btn"
@@ -96,9 +99,10 @@
             download="my-img.jpg"
             >⤓</a
           >
+        </div>
           <p class="user-msg"></p>
           <div class="share-container"></div>
-        </div>
+      
 
         <input
           type="text"
@@ -114,17 +118,17 @@
           type="color"
           class="color"
           name="color"
-          value="#f0000"
+          value="#ff0000"
           
           onclick="getColor(this)"
         /></div>
-        
+        <button class="emoji" onclick="drawEmoji() ">😱</button>
         <button onclick="onSwitch(this)" class="switch">
           ⇅
         </button>
        
           <button class="close"  onclick="closeEditor(this)">Close</button>
-       
+        
       </section>
     </div>
      

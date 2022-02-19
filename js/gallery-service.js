@@ -1,7 +1,11 @@
 'use strict'
 
-var gSortBy;
-var gSortDir = 'asc';
+// var gSortBy;
+// var gSortDir = 'asc';
+// var gFilterBy = { vendor: '', minSpeed: 0 }
+// var gSortBy = { id: '', keywords: true }
+
+
 
 
 var gImgs = [
@@ -34,10 +38,6 @@ function getImg() {
     return imgs
 }
 
-
-
-
-
 // function getImgForDisplay() {
 //     var imgs = gImgs;
 //     if (gSortBy === gImgs.keywords) {
@@ -63,14 +63,10 @@ function getImg() {
 //     return sortedImgs;
 // }
 
-
-
-
 function downloadImg(elLink) {
     var imgContent = gCanvas.toDataURL('image/jpeg')
     elLink.href = imgContent
 }
-
 
 // The next 2 functions handle IMAGE UPLOADING to img tag from file system: 
 function onImgInput(ev) {
@@ -92,9 +88,6 @@ function loadImageFromInput(ev, onImageReady) {
     // console.log('after');
     reader.readAsDataURL(ev.target.files[0])
 }
-
-
-
 
 
 function uploadImg() {
@@ -134,3 +127,34 @@ function doUploadImg(imgDataUrl, onSuccess) {
         })
 }
 
+
+// function setKeywordsSort(sortBy = {}) {
+//     // var memeId =
+//     if (sortBy.keywords !== undefined) {
+//         gImgs.sort((k1, k2) => (k1.keywords - k2.keywords) * sortBy.keywords)
+//     }
+//     // if (sortBy.vendor !== undefined) {
+//     //     gImgs.sort((k1, k2) => k1.vendor.localeCompare(k2.vendor) * sortBy.vendor)
+//     // }
+// }
+
+
+
+// function sortSelect(selElem) {
+//     var sortKeyWord = document.getElementById('keyword');
+//     // var tmpAry = new Array();
+//     for (var i = 0; i < selElem.options.length; i++) {
+//         sortKeyWord[i] = new Array();
+//         sortKeyWord[i][0] = selElem.options[i].text;
+//         sortKeyWord[i][1] = selElem.options[i].value;
+//     }
+//     sortKeyWord.sort();
+//     while (selElem.options.length > 0) {
+//         selElem.options[0] = null;
+//     }
+//     for (var i = 0; i < sortKeyWord.length; i++) {
+//         var op = new Option(sortKeyWord[i][0], sortKeyWord[i][1]);
+//         selElem.options[i] = op;
+//     }
+//     return;
+// }

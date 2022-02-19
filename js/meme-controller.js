@@ -14,18 +14,21 @@ function init() {
     gCtx = gCanvas.getContext('2d')
     // drawTextFirstLineFirstLine('try', 10, 25)
 
-
+    // addListeners()
     renderMeme()
+    // resizeCanvas()
 }
 // getMeme()
 
 function renderMeme() {
     if (isNewMeme) {
         newCurrMeme = getRandomMeme()
-        console.log('newCurrMeme', newCurrMeme);
-        isNewMeme = false;
+        console.log('newCurrMeme1', newCurrMeme);
+        isNewMeme = true;
     } else {
         newCurrMeme = getMeme()
+        console.log('newCurrMeme2', newCurrMeme);
+        isNewMeme = false;
     }
 
     var memeTxt = newCurrMeme.lines[newCurrMeme.selectedLineIdx];
@@ -36,13 +39,29 @@ function renderMeme() {
     // console.log('drawImg', drawImg());
 }
 
+
+// function renderCircle() {
+//     const { pos, color, size } = getMeme()
+//     // drawArc(pos.x, pos.y, size, color)
+// }
+
 function newMeme() {
     isNewMeme = true;
     // newCurrMeme = getRandomMeme()
-
-
     renderMeme()
+    isNewMeme = false;
 }
+
+
+// function addListeners() {
+//     addMouseListeners()
+//     addTouchListeners()
+//     window.addEventListener('resize', () => {
+
+//         renderMeme()
+//     })
+// }
+
 
 function drawTextFirstLine(memes, x, y) {
 
@@ -52,7 +71,7 @@ function drawTextFirstLine(memes, x, y) {
         gCtx.lineWidth = 2;
         gCtx.strokeStyle = 'black';
         gCtx.fillStyle = newColor;
-        gCtx.font = '60px Arial';
+        gCtx.font = '40px Arial';
         gCtx.textAlign = 'center';
 
         gCtx.fillText(lines.txt, x, y + indx * 350);
@@ -70,8 +89,22 @@ function drawEmoji() {
     var qui = '🔕';
     var x = '📣';
     var y = '🔔';
+    var imoj = [
+        glass, had, hor, scream, love, qui, x, y
+    ]
 
-    renderMeme();
+    for (var i = 0; i < imoj.length; i++) {
+        var newImoj = imoj[Math.floor(Math.random() * 8)];
+        // console.log('img', img);
+    }
+    var randomImoj = newImoj;
+    gCtx.font = '30px serif'
+    // use these alignment properties for "better" positioning
+    gCtx.textAlign = "center";
+    gCtx.textBaseline = "middle";
+    // draw the emoji
+    gCtx.fillText(randomImoj, gCanvas.width / 2, gCanvas.height / 2)
+    // renderMeme();
 
 }
 
@@ -80,8 +113,8 @@ function drawEmoji() {
 function onText(elTxt, elColor) {
     var elTxt = document.querySelector('.texts').value;
     var elColor = document.querySelector('.color').value;
-    setLineTxt(elTxt, elColor);
-
+    setLineTxt(elTxt);
+    setLineColor(elColor);
 
     renderMeme();
 }
@@ -105,7 +138,7 @@ function drawImg(imgId, memeTxt) {
 
 function onSwitch() {
 
-    var memeTxt = newCurrMeme.lines[newCurrMeme.selectedLineIdx];
+    // var memeTxt = newCurrMeme.lines[newCurrMeme.selectedLineIdx];
 
     if (newCurrMeme.selectedLineIdx === newCurrMeme.lines.length - 1) {
         newCurrMeme.selectedLineIdx = 0;
@@ -171,12 +204,11 @@ function getRandomMeme() {
         lines: [],
     };
     var lineNum = getRandomInt(1, 2)
-    // console.log('lineNum', lineNum);
+
     for (var i = 0; i < lineNum; i++) {
         var senten = getRandomSenten();
-        // console.log('senten', senten);
-        newMeme.lines.push({ size: 25, txt: senten, color: getRandomTxtColor(), stroke: getRandomStrokeColor(), align: 'center' })
-        // console.log('newMeme', newMeme.lines);
+        newMeme.lines.push({ font: '10px', txt: senten, color: getRandomTxtColor(), stroke: getRandomStrokeColor(), align: 'center' })
+
     }
     return newMeme
 }
