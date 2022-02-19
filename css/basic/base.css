@@ -4,12 +4,13 @@
 
 html {
   color: black;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
 }
 
 body {
   margin: 0;
   background-color: white;
+  font-family: asap;
 }
 
 img {
@@ -58,6 +59,7 @@ button:hover,
 }
 
 footer {
+  font-family: architects;
   position: absolute;
   padding: 40px;
   width: 100%;

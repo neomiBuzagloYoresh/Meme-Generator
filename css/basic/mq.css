@@ -156,10 +156,6 @@
   .btn-menu {
     display: block;
   }
-  /* canvas {
-    height: 300px;
-    width: 300px;
-  } */
 }
 /* }
 
@@ -184,7 +180,7 @@
   }
 }
 
-@media (min-width: 400px) {
+@media (max-width: 400px) {
   .main-layout {
     /* max-width: 400px; */
     margin: 0 auto;
@@ -195,7 +191,9 @@
   .editor {
     position: relative;
   }
-
+  .flexible {
+    padding: 0px;
+  }
   /* canvas {
     height: 150px;
     width: 150px;

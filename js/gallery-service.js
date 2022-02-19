@@ -4,7 +4,7 @@
 // var gSortDir = 'asc';
 // var gFilterBy = { vendor: '', minSpeed: 0 }
 // var gSortBy = { id: '', keywords: true }
-
+var gFilterBy = '';
 
 
 
@@ -34,10 +34,16 @@ var gImgs = [
 function getImg() {
     var imgs = gImgs;
     // console.log('imgs', imgs);
-
     return imgs
 }
 
+console.log(' filterImg()', filterImg());
+function filterImg() {
+    var imgByKeyWord = gImgs.filter(function (img) {
+        return img.keywords = "baby";
+    });
+
+}
 // function getImgForDisplay() {
 //     var imgs = gImgs;
 //     if (gSortBy === gImgs.keywords) {

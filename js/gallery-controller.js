@@ -10,7 +10,12 @@ function onInit() {
 
 function renderGallery() {
     var imgs = getImg();
+
     var strHTMLs = '';
+
+    // if (condition) {
+
+    // }
     strHTMLs = imgs.map((img) => {
         return `<img onclick="onImgSelect(${img.id})"  src="${img.url}" />
         
