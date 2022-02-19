@@ -2,11 +2,10 @@
 
 // var gSortBy;
 // var gSortDir = 'asc';
-// var gFilterBy = { vendor: '', minSpeed: 0 }
+var gFilterBy = { id: 1, keywords: 0 }
 // var gSortBy = { id: '', keywords: true }
-var gFilterBy = '';
-
-
+// var gFilterBy = '';
+var gKeywordSearchCountMap = { 'funny': 10, 'dog': 3, 'baby': 5 };
 
 var gImgs = [
     { id: 1, url: './meme-imgs/1.jpg', keywords: ['political', 'dog'] },
@@ -31,19 +30,31 @@ var gImgs = [
 
 ];
 
+console.log('getImgs() ', getImgs());
+
+function getImgs() {
+    var imgs = gImgs.filter((img) => img.keywords.includes(gFilterBy.keywords))
+    console.log('imgs', imgs);
+    const startIdx = gImgs.keywords * gKeywordSearchCountMap
+    imgs = imgs.slice(startIdx, startIdx + gKeywordSearchCountMap)
+
+    return imgs
+}
+
+
 function getImg() {
     var imgs = gImgs;
     // console.log('imgs', imgs);
     return imgs
 }
 
-console.log(' filterImg()', filterImg());
-function filterImg() {
-    var imgByKeyWord = gImgs.filter(function (img) {
-        return img.keywords = "baby";
-    });
+// console.log(' filterImg()', filterImg());
+// function filterImg() {
+//     var imgByKeyWord = gImgs.filter(function (img) {
+//         return img.keywords = "baby";
+//     });
 
-}
+// }
 // function getImgForDisplay() {
 //     var imgs = gImgs;
 //     if (gSortBy === gImgs.keywords) {

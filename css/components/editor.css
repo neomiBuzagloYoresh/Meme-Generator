@@ -4,7 +4,7 @@
   flex-flow: column;
   justify-content: flex-start;
 
-  background-color: gray;
+  background-color: rgba(199, 194, 194, 0.466);
   margin: auto;
   padding: 40px;
   /* z-index: 10; */
@@ -82,24 +82,22 @@ input[type="text"] {
   font-weight: bold;
   margin: 2px auto 2px;
   border-radius: 15%;
-  /* bottom: 0px;  */
-  /* margin-bottom: 0px; */
+
   align-self: center;
   background-color: white;
   color: black;
   border: 2px solid #000000;
 }
 .inputs {
-  grid-row: 4;
+  /* grid-row: 4; */
+  color: blue;
   font-size: 20px;
   padding: 5px;
   font-weight: bold;
   margin: 2px auto 2px;
   border-radius: 15%;
+  display: none;
 }
-/* .inputs .btn {
-  padding: 10px;
-} */
 
 .close {
   grid-row: 4;
@@ -114,18 +112,12 @@ input[type="text"] {
   /* margin: 5px; */
 }
 
-/* button .btn {
-  grid-row: 1;
-  grid-column: 4;
-  /* grid-column: 1; 
-  background-color: blue;
-} */
-
 .download {
   grid-row: 4;
   grid-column: 3;
   align-self: center;
   justify-self: center;
+  display: none;
 }
 
 .emoji {
@@ -136,4 +128,54 @@ input[type="text"] {
   font-weight: bold;
   margin: 2px auto 2px;
   border-radius: 15%;
+}
+
+.delete {
+  grid-row: 3;
+  grid-column: 4;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: bold;
+  margin: 2px auto 2px;
+  border-radius: 15%;
+  height: 30px;
+}
+
+.close-more {
+  display: none;
+}
+
+/* .open-more {
+} */
+
+.share-modal {
+  padding: 20px;
+  display: none;
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  background-color: aliceblue;
+  border-radius: 10%;
+  /* width: 100%; */
+}
+
+.close-more {
+  display: none;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: bold;
+  margin: 2px auto 2px;
+  border-radius: 15%;
+  height: 30px;
+}
+
+.open-more {
+  margin: auto;
+  padding: auto;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: bold;
+  margin: 2px auto 2px;
+  border-radius: 15%;
+  height: 30px;
 }

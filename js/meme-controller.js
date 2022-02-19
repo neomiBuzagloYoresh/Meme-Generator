@@ -6,7 +6,6 @@ var gCanvas;
 var gCtx;
 var gCurrShape = 'text';
 var gMeme;
-// var gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
 init()
 
 function init() {
@@ -185,6 +184,22 @@ function closeModal() {
     document.body.classList.toggle("menu-open");
 }
 
+function openMoreModal() {
+    var elOpen = document.querySelector('.share-modal');
+    var elClose = document.querySelector('.close-more');
+    var download = document.querySelector('.download');
+    var inputs = document.querySelector('.inputs');
+    download.style.display = 'block'
+    inputs.style.display = 'block'
+    elOpen.style.display = 'block'
+    elClose.style.display = 'block'
+}
+
+
+function closeMoreModal() {
+    var elClose = document.querySelector('.share-modal');
+    elClose.style.display = 'none'
+}
 
 
 function getRandomMeme() {

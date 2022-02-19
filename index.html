@@ -60,7 +60,7 @@
           <option value="israel">israel</option>
         </datalist>
       </nav>
-      <button onclick="newMeme(this)" class="flexible">i'm flexible</button>
+     
     </section>
     <section
       id="gallery"
@@ -69,7 +69,28 @@
    
 
   </section>
-
+  <div  class="share-modal  main-layou flex">
+    <div class="inputs ">
+          
+      <button class="btn" onclick="uploadImg()">
+        <a href="#" class="fa fa-facebook" ></a>
+      </button>
+  </div>
+  <div class="download">
+      <a
+        href="#"
+        class="btn"
+        id="btns"
+        onclick="downloadImg(this)"
+        download="my-img.jpg"
+        >download Img ⤓</a
+      >
+    </div>
+      <p class="user-msg"></p>
+      <div class="share-container"></div>
+      <button onclick=" closeMoreModal()" class="close-more">Close</button>
+  </div>
+  <button onclick="newMeme(this)" class="flexible">i'm flexible</button>
     <section
       class="editor flex "
     >
@@ -85,24 +106,7 @@
     </div>
   
       <section class="editor-tools grid main-layou">
-        <div class="inputs ">
-        
-          <button class="btn" onclick="uploadImg()">
-            <a href="#" class="fa fa-facebook" ></a>
-          </button>
-</div>
-<div class="download">
-          <a
-            href="#"
-            class="btn"
-            id="btns"
-            onclick="downloadImg(this)"
-            download="my-img.jpg"
-            >⤓</a
-          >
-        </div>
-          <p class="user-msg"></p>
-          <div class="share-container"></div>
+   
       
 
         <input
@@ -123,16 +127,19 @@
           
           onclick="getColor(this)"
         /></div>
-        <button class="emoji" onclick="drawEmoji() ">😃</button>
+        <!-- <button class="emoji" onclick="drawEmoji() ">😃</button> -->
         <button onclick="onSwitch(this)" class="switch">
           ⇅
         </button>
+        <button onclick="openMoreModal()" class="open-more">More</button>
        <button class="delete" onclick="clearCanvas()"><img src="meme-imgs/trash-solid (1).svg"></button>
           <button class="close"  onclick="closeEditor(this)">Close</button>
           
       </section>
     </div>
      
+
+
     </section>
 
     <footer class="main-layou">©Meme Generator</footer>
