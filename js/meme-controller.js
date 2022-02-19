@@ -188,7 +188,7 @@ function openMoreModal() {
     var download = document.querySelector('.download');
     var inputs = document.querySelector('.inputs');
     download.style.display = 'block'
-    inputs.style.display = 'block'
+    // inputs.style.display = 'block'
     elOpen.style.display = 'block'
     elClose.style.display = 'block'
 }
