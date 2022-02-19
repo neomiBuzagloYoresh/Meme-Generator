@@ -72,15 +72,13 @@
     right: 0px;
     margin: 20px;
     padding: 20px;
-    /* grid-template-columns: 1fr 2fr 3fr;
-    grid-template-rows: 1fr 2fr 3fr; */
   }
   .inputs .btn {
     right: 0px;
   }
   .switch {
     right: 0px;
-    position: absolute;
+    /* position: absolute; */
   }
 }
 
@@ -121,6 +119,7 @@
   canvas {
     height: 300px;
     width: 300px;
+    z-index: 12;
   }
 
   .inputs .btn {
@@ -132,10 +131,14 @@
   }
   .switch {
     display: flex;
-    right: px;
   }
   div .colors {
     display: block;
+  }
+  .share-modal {
+    z-index: 10;
+    /* position: relative; */
+    /* position: fixed; */
   }
 }
 /* MEDIUM */
@@ -166,13 +169,7 @@
   .main-layout {
     max-width: 1060px;
   }
-  /* .btn-menu {
-    display: block;
-  } */
-  /* canvas {
-    height: 450px;
-    width: 450px;
-  } */
+
   .btn-modal {
     display: none;
   }
@@ -195,20 +192,10 @@
   .flexible {
     padding: 0px;
   }
-  /* canvas {
-    height: 150px;
-    width: 150px;
-  } */
-  /* .editor-div {
-    flex-direction: column;
-  } */
-
-  /* .editor-tools {
-    display: inline-block;
-    flex-direction: row;
-    margin: 0px;
-  } */
-  /* footer {
-    bottom: 0px;
-  } */
+  .share-modal {
+    z-index: 10;
+    height: 40px;
+    /* position: relative; */
+    /* position: fixed; */
+  }
 }
