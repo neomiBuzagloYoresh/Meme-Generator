@@ -113,8 +113,6 @@ input[type="text"] {
 }
 
 .download {
-  grid-row: 4;
-  grid-column: 3;
   align-self: center;
   justify-self: center;
   display: none;
@@ -150,6 +148,7 @@ input[type="text"] {
 
 .share-modal {
   padding: 20px;
+  margin: 50px;
   display: none;
   position: absolute;
   height: 400px;
@@ -160,11 +159,13 @@ input[type="text"] {
 }
 
 .close-more {
+  margin-top: 200px;
+  margin-left: 150px;
   display: none;
   font-size: 20px;
   padding: 5px;
   font-weight: bold;
-  margin: 2px auto 2px;
+  /* margin: 2px auto 2px; */
   border-radius: 15%;
   height: 30px;
 }
@@ -179,3 +180,9 @@ input[type="text"] {
   border-radius: 15%;
   height: 30px;
 }
+
+/* .facebook {
+  height: 50px;
+  width: 50px;
+  border: none;
+} */

@@ -1,23 +1,21 @@
 'use strict'
-
+init()
 var isNewMeme = false;
 var newCurrMeme;
 var gCanvas;
 var gCtx;
 var gCurrShape = 'text';
 var gMeme;
-init()
+
 
 function init() {
     gCanvas = document.getElementById('my-canvas')
     gCtx = gCanvas.getContext('2d')
-    // drawTextFirstLineFirstLine('try', 10, 25)
 
-    // addListeners()
     renderMeme()
-    // resizeCanvas()
+
 }
-// getMeme()
+
 
 function renderMeme() {
     if (isNewMeme) {
@@ -53,7 +51,7 @@ function newMeme() {
 
 function drawTextFirstLine(memes, x, y) {
 
-    // console.log('memes', memes);
+
     newCurrMeme.lines.forEach((line, indx) => {
 
         gCtx.lineWidth = 2;
@@ -269,42 +267,3 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-
-
-// console.log('newMeme()', newMeme());
-
-
-
-
-
-
-
-// function openMenu() {
-//     document.body.classList.add('menu-open')
-// }
-
-// function closeMenu() {
-//     document.body.classList.remove('menu-open')
-// }
-
-// function openModal() {
-//     document.body.classList.toggle('modal-open')
-// }
-
-// function closeModal() {
-//     document.body.classList.remove('modal-open')
-// }
-
-
-// function toggleMenu() {
-//     document.body.classList.toggle('menu-open');
-//     closeModal()
-//   }
-//   function toggleModal() {
-//     document.querySelector('.modal').classList.toggle('hidden');
-//     document.body.classList.toggle('modal-open');
-//   }
-//   function closeModal() {
-//     document.querySelector('.modal').classList.add('hidden');
-//     document.body.classList.remove('modal-open');
-//   }
