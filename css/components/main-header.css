@@ -4,13 +4,6 @@
   box-shadow: inset 0px -6px 0 #141414;
 }
 
-/* .main-header .header-container {
-  height: 100%;
-}
-
-.header-container nav {
-  height: 100%;
-} */
 .inner-header {
   display: flex;
   justify-content: space-between;

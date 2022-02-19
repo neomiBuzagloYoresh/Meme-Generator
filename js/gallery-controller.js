@@ -1,11 +1,9 @@
 'use strict'
 
-// var elGallrey = document.querySelector('.gallery')
 
 
 function onInit() {
     renderGallery()
-    // resizeCanvas()
 }
 
 function renderGallery() {
@@ -13,9 +11,7 @@ function renderGallery() {
 
     var strHTMLs = '';
 
-    // if (condition) {
 
-    // }
     strHTMLs = imgs.map((img) => {
         return `<img onclick="onImgSelect(${img.id})"  src="${img.url}" />
         
@@ -49,24 +45,6 @@ function selectPage() {
 }
 
 
-// function onSortChange(sortBy) {
-//     setSortBy(sortBy);
-//     renderGallery()
-// }
 
 
 
-// function onSetSortBy() {
-//     const prop = document.querySelector('.keyword').value
-//     const isDesc = document.querySelector('.sort-desc').checked
-
-//     const sortBy = {}
-//     sortBy[prop] = (isDesc) ? -1 : 1;
-
-//     // Shorter Syntax:
-//     // const sortBy = {
-//     //     [prop] : (isDesc)? -1 : 1
-//     // }
-//     setCarSort(sortBy)
-//     renderCars();
-// }

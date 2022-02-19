@@ -137,8 +137,6 @@
   }
   .share-modal {
     z-index: 10;
-    /* position: relative; */
-    /* position: fixed; */
   }
 }
 /* MEDIUM */
@@ -195,7 +193,5 @@
   .share-modal {
     z-index: 10;
     height: 40px;
-    /* position: relative; */
-    /* position: fixed; */
   }
 }

@@ -66,34 +66,6 @@ function drawTextFirstLine(memes, x, y) {
     });
 }
 
-// function drawEmoji() {
-//     var glass = '🕶️';
-//     var had = '⛑️';
-//     var hor = '🌪️';
-//     var scream = '😱';
-//     var love = '♥️';
-//     var qui = '🔕';
-//     var x = '📣';
-//     var y = '🔔';
-//     var imoj = [
-//         glass, had, hor, scream, love, qui, x, y
-//     ]
-
-//     for (var i = 0; i < imoj.length; i++) {
-//         var newImoj = imoj[Math.floor(Math.random() * 8)];
-//         // console.log('img', img);
-//     }
-//     var randomImoj = newImoj;
-//     gCtx.font = '30px serif'
-//     // use these alignment properties for "better" positioning
-//     gCtx.textAlign = "left";
-//     gCtx.textBaseline = "middle";
-//     // draw the emoji
-//     gCtx.fillText(randomImoj, gCanvas.width / 2, gCanvas.height / 2)
-//     // renderMeme();
-
-// }
-
 
 
 function onText(elTxt, elColor) {
@@ -125,7 +97,6 @@ function drawImg(imgId, memeTxt) {
 
 function onSwitch() {
 
-    // var memeTxt = newCurrMeme.lines[newCurrMeme.selectedLineIdx];
 
     if (newCurrMeme.selectedLineIdx === newCurrMeme.lines.length - 1) {
         newCurrMeme.selectedLineIdx = 0;
@@ -139,8 +110,7 @@ function onSwitch() {
 }
 
 function clearCanvas() {
-    // gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height);
-    // You may clear part of the canvas
+
     gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height)
 }
 
@@ -188,7 +158,6 @@ function openMoreModal() {
     var download = document.querySelector('.download');
     var inputs = document.querySelector('.inputs');
     download.style.display = 'block'
-    // inputs.style.display = 'block'
     elOpen.style.display = 'block'
     elClose.style.display = 'block'
 }

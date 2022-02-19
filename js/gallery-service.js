@@ -28,13 +28,10 @@ var gImgs = [
 
 ];
 
-console.log('getImgs() ', getImgs());
+console.log('getImgs() ', filterImgs());
 
-function getImgs() {
-    var imgs = gImgs.filter((img) => img.keywords.includes(gFilterBy.keywords))
-    console.log('imgs', imgs);
-    const startIdx = gImgs.keywords * gKeywordSearchCountMap
-    imgs = imgs.slice(startIdx, startIdx + gKeywordSearchCountMap)
+function filterImgs() {
+    var imgs = gImgs.filter(img => img.keywords > 2);
 
     return imgs
 }
@@ -46,35 +43,31 @@ function getImg() {
     return imgs
 }
 
-// console.log(' filterImg()', filterImg());
-// function filterImg() {
-//     var imgByKeyWord = gImgs.filter(function (img) {
-//         return img.keywords = "baby";
-//     });
+// function drawEmoji() {
+//     var glass = '🕶️';
+//     var had = '⛑️';
+//     var hor = '🌪️';
+//     var scream = '😱';
+//     var love = '♥️';
+//     var qui = '🔕';
+//     var x = '📣';
+//     var y = '🔔';
+//     var imoj = [
+//         glass, had, hor, scream, love, qui, x, y
+//     ]
 
-// }
-// function getImgForDisplay() {
-//     var imgs = gImgs;
-//     if (gSortBy === gImgs.keywords) {
-//         imgs = sortByName();
+//     for (var i = 0; i < imoj.length; i++) {
+//         var newImoj = imoj[Math.floor(Math.random() * 8)];
+//         // console.log('img', img);
 //     }
-//     return imgs;
-// }
+//     var randomImoj = newImoj;
+//     gCtx.font = '30px serif'
+//     // use these alignment properties for "better" positioning
+//     gCtx.textAlign = "left";
+//     gCtx.textBaseline = "middle";
+//     // draw the emoji
+//     gCtx.fillText(randomImoj, gCanvas.width / 2, gCanvas.height / 2)
+//     // renderMeme();
 
-// function setSortBy(sortBy) {
-//     gSortBy = sortBy;
-//     gSortDir = gSortDir === 'asc' ? 'desc' : 'asc';
-// }
-
-
-// function sortByName() {
-//     var sortedImgs = gImgs.sort(function (img1, img2) {
-//         var changeDir = gSortDir === 'desc' ? -1 : 1;
-//         return (
-//             (img1.gImgs.keywords.toLowerCase() > img2.gImgs.keywords.toLowerCase() ? 1 : -1) *
-//             changeDir
-//         );
-//     });
-//     return sortedImgs;
 // }
 
