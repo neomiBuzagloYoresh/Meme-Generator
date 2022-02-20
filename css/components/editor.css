@@ -53,12 +53,9 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 input[type="text"] {
-  /* grid-row: 1;
-  grid-column: 2 / span 3; */
-  /* margin: auto; */
-  /* margin: auto; */
   border: none;
   border-bottom: 2px solid rgb(0, 0, 0);
+  margin-right: 5px;
 }
 
 .btn-editor.switch {

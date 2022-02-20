@@ -7,7 +7,7 @@ const STORAGE_KEY = 'memeDB';
 function renderMemesGallery() {
     document.querySelector('.my-memes').style.display = 'block';
 
-    document.querySelector('.gallery').style.display = 'none';
+    document.querySelector('.gallery-pic').style.display = 'none';
     document.querySelector('.editor').style.display = 'none';
     // document.querySelector('.search').style.display = 'none';
 

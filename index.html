@@ -68,7 +68,7 @@
     </section>
     <section
       id="gallery"
-      class="grid-container gallery grid"
+      class="grid-container gallery-pic grid"
     >
    
 
@@ -140,9 +140,12 @@
         /></div>
       </div>
         <div class="btn-continer">
-<button class="btn-editor" onclick="saveMeme(this)">Save</button>
-        <!-- <button onclick="textSize()">+</button> -->
+          <button class="btn-editor plus" onclick="onPlusSize()">+</button>
+          <button class="btn-editor minus"  onclick="onMinusSize()">-</button>
+          <button class="btn-editor" onclick="saveMeme(this)">Save</button>
         <!-- <button class="emoji" onclick="drawEmoji() ">😃</button> -->
+
+
         <button onclick="onSwitch(this)" class="btn-editor switch">
           ⇅
         </button>

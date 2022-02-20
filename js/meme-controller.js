@@ -49,6 +49,19 @@ function newMeme() {
 }
 
 
+// gMeme.lines[gMeme.selectedLineIdx].txt = txt;
+
+function onPlusSize() {
+    newCurrMeme = getMeme()
+    newCurrMeme.lines[newCurrMeme.selectedLineIdx].size += 1;
+    renderMeme();
+}
+
+function onMinusSize() {
+    newCurrMeme = getMeme()
+    newCurrMeme.lines[newCurrMeme.selectedLineIdx].size -= 1;
+    renderMeme();
+}
 
 
 
@@ -61,7 +74,7 @@ function drawTextFirstLine(memes, x, y) {
         gCtx.lineWidth = 2;
         gCtx.strokeStyle = 'white';
         gCtx.fillStyle = line.color;
-        gCtx.font = `${line.font} Ariel`;
+        gCtx.font = `${line.size}px Ariel`;
         gCtx.textAlign = 'center';
 
 
@@ -82,13 +95,7 @@ function saveMeme() {
 }
 
 
-// function textSize() {
-//     var meme = getMeme();
-//     meme.line.fontSize++
-//     // var font = document.getElementById('b').style.fontSize;            
-//     // font++;
-//     return meme.line.fontSize + 'px'
-// }
+
 
 
 function onText(elTxt, elColor) {
@@ -150,7 +157,7 @@ function closeEditor() {
 
 function openEditor() {
     var open = document.querySelector('.editor ');
-    var close = document.querySelector('.gallery ');
+    var close = document.querySelector('.gallery-pic ');
     var closeMeme = document.querySelector('.my-memes');
 
     open.style.display = 'block'

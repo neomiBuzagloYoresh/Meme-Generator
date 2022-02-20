@@ -1,4 +1,4 @@
-.gallery {
+.gallery-pic {
   grid-template-columns: repeat(
     auto-fit,
     minmax(200px, 1fr)
@@ -11,7 +11,7 @@
   margin: 0 auto;
   background-color: rgba(99, 93, 93, 0.171);
 }
-.gallery img {
+.gallery-pic img {
   height: 200px;
   width: 200px;
   grid-template-columns: repeat(5, 1fr);

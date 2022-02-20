@@ -18,12 +18,12 @@ function renderGallery() {
         `
     })
 
-    document.querySelector('.gallery').innerHTML = strHTMLs.join('');
+    document.querySelector('.gallery-pic').innerHTML = strHTMLs.join('');
 }
 
 
 function onImgSelect(id) {
-    var elGallrey = document.querySelector('.gallery')
+    var elGallrey = document.querySelector('.gallery-pic')
     var elCurImg = document.getElementById('my-canvas')
     elGallrey.style.display = 'none';
     elCurImg.style.display = 'block';
@@ -36,7 +36,7 @@ function onImgSelect(id) {
 
 
 function selectPage() {
-    var elGallrey = document.querySelector('.gallery')
+    var elGallrey = document.querySelector('.gallery-pic')
     var elEditor = document.querySelector('.editor')
     elGallrey.style.display = 'block';
     elEditor.classList.remove('hide');
