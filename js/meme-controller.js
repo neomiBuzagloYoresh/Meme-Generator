@@ -213,7 +213,7 @@ function getRandomMeme() {
 
     for (var i = 0; i < lineNum; i++) {
         var senten = getRandomSenten();
-        newMeme.lines.push({ font: '20px', txt: senten, color: getRandomTxtColor(), stroke: getRandomStrokeColor(), align: 'center' })
+        newMeme.lines.push({ font: '10px', txt: senten, color: getRandomTxtColor(), stroke: getRandomStrokeColor(), align: 'center' })
 
     }
     return newMeme
@@ -261,12 +261,3 @@ function getRandomInt(min, max) {
 
 
 
-// function getRandomImg() {
-
-//     for (var i = 0; i < gImgs.length; i++) {
-//         var img = gImgs[Math.floor(Math.random() * 18)];
-//         // console.log('img', img);
-//     }
-//     return img
-
-// }
