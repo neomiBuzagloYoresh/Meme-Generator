@@ -14,7 +14,7 @@ gMeme = {
             txt: 'txt1',
             size: 40,
             align: 'center',
-            color: 'black',
+            color: 'white',
             font: '40px'
         },
         {
@@ -54,6 +54,17 @@ function getColor() {
 }
 
 
+// function moveText(line, dx, dy) {
+//     line.x += dx;
+//     line.y += dy;
+// }
+
+// function Updatelocation() {
+//     gMeme[0].lines.forEach((line) => {
+//         line.y += 20;
+//     });
+// }
+
 
 
 function addMemeToArr(img) {
@@ -65,3 +76,10 @@ function addMemeToArr(img) {
 function _saveMemesToStorage() {
     saveToStorage(STORAGE_KEY, gSavedMemes)
 }
+
+
+
+
+
+
+// gMeme.lines[0].txt.length * gMeme.lines[0].fontSize / 2

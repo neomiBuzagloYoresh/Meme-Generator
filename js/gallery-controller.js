@@ -7,7 +7,7 @@ function onInit() {
 }
 
 function renderGallery() {
-    var imgs = getImg();
+    var imgs = getImagesForDisplay();
 
     var strHTMLs = '';
 

@@ -1,9 +1,9 @@
 'use strict'
 
+var gFilterBy = 'ALL';
 
-var gFilterBy = { id: 1, keywords: 0 }
 
-var gKeywordSearchCountMap = { 'funny': 10, 'dog': 3, 'baby': 5 };
+
 
 var gImgs = [
     { id: 1, url: './meme-imgs/1.jpg', keywords: ['political', 'dog'] },
@@ -19,29 +19,31 @@ var gImgs = [
     { id: 11, url: './meme-imgs/11.jpg', keywords: ['funny', 'love'] },
     { id: 12, url: './meme-imgs/12.jpg', keywords: ['israel', 'love'] },
     { id: 13, url: './meme-imgs/13.jpg', keywords: ['funny', 'actor'] },
-    { id: 14, url: './meme-imgs/14.jpg', keywords: ['funny', 'baby'] },
-    { id: 15, url: './meme-imgs/15.jpg', keywords: ['funny', 'political'] },
-    { id: 16, url: './meme-imgs/16.jpg', keywords: ['funny', 'love'] },
-    { id: 17, url: './meme-imgs/17.jpg', keywords: ['israel', 'love'] },
-    { id: 18, url: './meme-imgs/18.jpg', keywords: ['israel', 'love'] },
+    { id: 14, url: './meme-imgs/14.jpg', keywords: ['funny', 'actor'] },
+    { id: 15, url: './meme-imgs/15.jpg', keywords: ['funny', 'actor'] },
+    { id: 16, url: './meme-imgs/16.jpg', keywords: ['funny', 'actor'] },
+    { id: 17, url: './meme-imgs/17.jpg', keywords: ['political', 'funny'] },
+    { id: 18, url: './meme-imgs/18.jpg', keywords: ['actor', 'love'] },
 
 
 ];
 
-console.log('getImgs() ', filterImgs());
 
-function filterImgs() {
-    var imgs = gImgs.filter(img => img.keywords > 2);
 
-    return imgs
+
+
+function setFilter(filterBy) {
+    if (filterBy === 'ALL') gFilterBy = 'ALL';
+    gFilterBy = filterBy;
+    renderGallery();
+}
+function getImagesForDisplay() {
+    if (gFilterBy === 'ALL') return gImgs;
+
+    return gImgs.filter((img) => img.keywords.includes(gFilterBy));
 }
 
 
-function getImg() {
-    var imgs = gImgs;
-    // console.log('imgs', imgs);
-    return imgs
-}
 
 // function drawEmoji() {
 //     var glass = '🕶️';

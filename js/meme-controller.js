@@ -59,7 +59,7 @@ function drawTextFirstLine(memes, x, y) {
     newCurrMeme.lines.forEach((line, indx) => {
 
         gCtx.lineWidth = 2;
-        gCtx.strokeStyle = 'black';
+        gCtx.strokeStyle = 'white';
         gCtx.fillStyle = line.color;
         gCtx.font = `${line.font} Ariel`;
         gCtx.textAlign = 'center';
@@ -251,7 +251,6 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
 
 
 

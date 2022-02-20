@@ -1,21 +1,36 @@
 .sec-nav {
-  background-color: rgb(233, 141, 20);
+  background-color: rgb(224, 164, 86);
   color: #ffff;
   box-shadow: inset 0px -6px 0 #141414;
 }
 
 input[list] {
-  /* left: 0px; */
   margin-bottom: 8px;
   margin-left: 5px;
   height: 20px;
   max-width: 500px;
-  /* background: #d2e9ff; */
   padding: 15px 15px 15px 15px;
-  font: 12px Arial, Helvetica, sans-serif;
-  color: #666;
 }
 
 .sec-nav {
   height: 100%;
+}
+
+.datalist {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  align-items: center;
+}
+
+i {
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  color: #141414;
+  margin: auto;
 }

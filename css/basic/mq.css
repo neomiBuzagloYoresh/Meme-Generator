@@ -63,22 +63,20 @@
   }
 
   header .btn-menu {
-    display: block;
+    display: inline-flex;
   }
   .editor-tools {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    right: 0px;
+
     margin: 20px;
     padding: 20px;
   }
-  .inputs .btn {
-    right: 0px;
-  }
-  .switch {
-    right: 0px;
-    /* position: absolute; */
+  canvas {
+    height: 290px;
+    width: 290px;
+    z-index: 12;
   }
 }
 
@@ -153,9 +151,6 @@
     display: flex;
     flex-wrap: wrap;
   }
-  .btn-menu {
-    display: block;
-  }
 }
 /* }
 
@@ -170,7 +165,7 @@
     display: none;
   }
   .btn-menu {
-    display: block;
+    /* display: block; */
   }
 }
 
@@ -180,7 +175,7 @@
     margin: 0 auto;
   }
   .btn-menu {
-    display: none;
+    /* display: none; */
   }
   .editor {
     position: relative;

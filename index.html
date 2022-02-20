@@ -42,22 +42,27 @@
     </header>
     <section class="sec-nav flex main-layou ">
   
-        <label for="keywords">search keywords:</label>
+        <div  class="datalist flex">
         <input
-        type="text"
-          name="keywords"
-          list="keyword"
+        class="datalist"
+          list="gallery"
           placeholder="Enter search Keyword"
-          id="keywords"
+          onchange="setFilter(this.value)"
         />
 
-        <datalist  id="keyword">
-          <option value="political">political</option>
-          <option value="love">love</option>
-          <option value="baby">baby</option>
-          <option value="funny">funny</option>
-          <option value="israel">israel</option>
-        </datalist>
+        <datalist id="gallery">
+          <option value="ALL">
+         <option value="dog">
+          <option value="political">
+          <option value="love">
+          <option value="baby">
+          <option value="funny">
+          <option value="israel">
+            <option value="actor">
+              <option value="cat">
+          </datalist>
+          <i class="fa fa-search sign"></i>
+      </div>
       </nav>
      
     </section>
@@ -80,8 +85,6 @@
 
   <div class="share-modal main-layou flex">
     
-      
-  
   <div class="download">
       <a
         href="#"
@@ -100,7 +103,7 @@
       <div class="share-container"></div>
       <button onclick=" closeMoreModal()" class="btn-editor close-more">Close</button>
   </div>
-  <button onclick="newMeme(this)" class="btn-editor ">i'm flexible</button>
+  <button onclick="newMeme(this)" class="flexible btn-editor">i'm flexible</button>
     <section
       class="editor flex "
     >
@@ -116,6 +119,7 @@
     </div>
   
       <section class="editor-tools ">
+        <div class="tools flex">
         <input
           type="text"
           name="texts"
@@ -134,7 +138,7 @@
           
           onclick="getColor(this)"
         /></div>
-
+      </div>
         <div class="btn-continer">
 <button class="btn-editor" onclick="saveMeme(this)">Save</button>
         <!-- <button onclick="textSize()">+</button> -->
