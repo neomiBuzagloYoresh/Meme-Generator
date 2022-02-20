@@ -1,5 +1,5 @@
 .main-header {
-  background-color: rgb(240, 169, 17);
+  background-color: rgb(235, 134, 2);
   color: #ffff;
   box-shadow: inset 0px -6px 0 #141414;
 }
@@ -40,7 +40,7 @@
 }
 
 .main-header .main-nav a:hover {
-  color: rgb(109, 86, 25);
+  color: rgb(221, 218, 21);
 }
 
 .main-header .main-nav a:hover {
@@ -58,8 +58,8 @@
 header .btn-menu {
   cursor: pointer;
   text-align: center;
-  height: 5vh;
-  width: 5vh;
+  height: 50px;
+  width: 50px;
   font-size: 1.5rem;
   background-color: #474747;
   align-items: center;
