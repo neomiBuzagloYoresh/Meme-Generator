@@ -31,7 +31,7 @@
               >
             </li>
             <li>
-              <a href="#">Your Meme </a>
+              <a href="#" onclick="renderMemesGallery()">Your Meme </a>
             </li>
           </ul>
         </nav>
@@ -68,7 +68,17 @@
    
 
   </section>
-  <div  class="share-modal  main-layou flex">
+
+  <section
+ 
+  class="my-memes grid"
+>
+<div class="my-saved-memes"></div>
+<button onclick="downloadMemeImg(this)" class="btn-editor">download Img ⤓</button>
+</section>
+
+
+  <div class="share-modal main-layou flex">
     
       
   
@@ -126,7 +136,7 @@
         /></div>
 
         <div class="btn-continer">
-<button class="btn-editor" onclick="saveMeme()">Save</button>
+<button class="btn-editor" onclick="saveMeme(this)">Save</button>
         <!-- <button onclick="textSize()">+</button> -->
         <!-- <button class="emoji" onclick="drawEmoji() ">😃</button> -->
         <button onclick="onSwitch(this)" class="btn-editor switch">
@@ -146,7 +156,8 @@
     </section>
 
     <footer class="main-layou">©Meme Generator</footer>
-    <script src="/js/storage.servise.js"></script>
+    <script src="js/storage.servise.js"></script>
+    <script src="js/my-meme.js"></script>
     <script src="js/memesSentences.js"></script>
     <script src="js/meme-service.js"></script>
     <script src="js/meme-controller.js"></script>

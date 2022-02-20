@@ -1,8 +1,8 @@
 'use strict'
 
-const STORAGE_KEY = 'memeDB';
+
 var gMeme;
-var gSavedMemes;
+var gSavedMemes = [];
 
 
 gMeme = {
@@ -54,9 +54,6 @@ function getColor() {
 }
 
 
-function _saveMemesToStorage() {
-    saveToStorage(STORAGE_KEY, gMeme)
-}
 
 
 function addMemeToArr(img) {
@@ -64,4 +61,7 @@ function addMemeToArr(img) {
     if (!gSavedMemes || !gSavedMemes.length) gSavedMemes = [];
     gSavedMemes.push(img);
     _saveMemesToStorage();
+}
+function _saveMemesToStorage() {
+    saveToStorage(STORAGE_KEY, gSavedMemes)
 }

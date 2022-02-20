@@ -22,11 +22,11 @@ function init() {
 function renderMeme() {
     if (isNewMeme) {
         newCurrMeme = getRandomMeme()
-        console.log('newCurrMeme1', newCurrMeme);
+        // console.log('newCurrMeme1', newCurrMeme);
         isNewMeme = true;
     } else {
         newCurrMeme = getMeme()
-        console.log('newCurrMeme2', newCurrMeme);
+        // console.log('newCurrMeme2', newCurrMeme);
         isNewMeme = false;
     }
 
@@ -53,7 +53,7 @@ function newMeme() {
 
 
 function drawTextFirstLine(memes, x, y) {
-    gMeme = loadFromStorage(STORAGE_KEY)
+
 
 
     newCurrMeme.lines.forEach((line, indx) => {
@@ -70,17 +70,14 @@ function drawTextFirstLine(memes, x, y) {
 
     });
 }
-function memeController() {
 
 
-}
-
-saveMeme()
 function saveMeme() {
 
     var imgContent = gCanvas.toDataURL('image/jpeg')
-    console.log('imgContent', imgContent);
+
     addMemeToArr(imgContent)
+    // console.log(' addMemeToArr(elLink).href', addMemeToArr(elLink));
 
 }
 
@@ -154,8 +151,11 @@ function closeEditor() {
 function openEditor() {
     var open = document.querySelector('.editor ');
     var close = document.querySelector('.gallery ');
+    var closeMeme = document.querySelector('.my-memes');
+
     open.style.display = 'block'
     close.style.display = 'none'
+    closeMeme.style.display = 'none'
     // renderMeme()
     // renderImg()
 }
