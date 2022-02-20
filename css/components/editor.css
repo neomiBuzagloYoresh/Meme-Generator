@@ -12,19 +12,12 @@
 }
 
 .editor-tools {
-  /* max-width: min-content; */
-  margin-top: 10px;
-
-  grid-template-columns: 80px 80px 80px 80px;
-  grid-template-rows: 80px 80px 80px 80px;
-  gap: 1px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  justify-content: space-evenly;
   align-items: flex-end;
   align-items: center;
-  /* flex-basis: content;
-  right: 0px;
-  padding: 0px;
- 
-  padding-left: 2px; */
 }
 
 /* .editor-div {
@@ -50,8 +43,8 @@ input[type="color"]::-webkit-color-swatch {
   border: none;
 }
 .colors {
-  grid-row: 2;
-  grid-column: 4;
+  /* grid-row: 2;
+  grid-column: 4; */
   /* border: none;
   -webkit-appearance: none; */
 }
@@ -66,8 +59,8 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 input[type="text"] {
-  grid-row: 1;
-  grid-column: 2 / span 3;
+  /* grid-row: 1;
+  grid-column: 2 / span 3; */
   /* margin: auto; */
   /* margin: auto; */
   border: none;
@@ -75,8 +68,8 @@ input[type="text"] {
 }
 
 .switch {
-  grid-row: 1;
-  grid-column: 1;
+  /* grid-row: 1;
+  grid-column: 1; */
   font-size: 20px;
   padding: 5px;
   font-weight: bold;
@@ -120,8 +113,8 @@ input .btn-share {
 }
 
 .close {
-  grid-row: 4;
-  grid-column: 4;
+  /* grid-row: 4;
+  grid-column: 4; */
   align-self: center;
 
   font-size: 20px;
@@ -145,8 +138,8 @@ input .btn-share {
   font-size: 20px;
 }
 .emoji {
-  grid-row: 3;
-  grid-column: 4;
+  /* grid-row: 3;
+  grid-column: 4; */
   font-size: 20px;
   padding: 5px;
   font-weight: bold;
@@ -155,8 +148,8 @@ input .btn-share {
 }
 
 .delete {
-  grid-row: 3;
-  grid-column: 4;
+  /* grid-row: 3;
+  grid-column: 4; */
   font-size: 20px;
   padding: 5px;
   font-weight: bold;
@@ -179,10 +172,6 @@ input .btn-share {
   border-radius: 10%;
   /* width: 100%; */
 }
-
-/* div .input {
-  margin: 100px;
-} */
 
 .close-more {
   margin-top: 100px;
@@ -223,4 +212,56 @@ input .btn-share {
   color: aliceblue;
   font-size: 20px;
   border-radius: 15%;
+}
+
+.btn-continer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 188px;
+}
+
+.btn-editor {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.btn-editor:hover,
+.button:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.btn-editor:hover {
+  transform: translateY(-1px);
+}
+
+.btn-editor:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
 }

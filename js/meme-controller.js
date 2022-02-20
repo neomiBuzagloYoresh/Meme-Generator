@@ -1,5 +1,6 @@
 'use strict'
 init()
+
 var isNewMeme = false;
 var newCurrMeme;
 var gCanvas;
@@ -15,6 +16,7 @@ function init() {
     renderMeme()
 
 }
+
 
 
 function renderMeme() {
@@ -34,6 +36,7 @@ function renderMeme() {
     drawImg(memeImg, memeTxt)
     clearCanvas()
     // console.log('drawImg', drawImg());
+    _saveMemesToStorage()
 }
 
 
@@ -50,6 +53,7 @@ function newMeme() {
 
 
 function drawTextFirstLine(memes, x, y) {
+    gMeme = loadFromStorage(STORAGE_KEY)
 
 
     newCurrMeme.lines.forEach((line, indx) => {
@@ -60,12 +64,34 @@ function drawTextFirstLine(memes, x, y) {
         gCtx.font = `${line.font} Ariel`;
         gCtx.textAlign = 'center';
 
+
         gCtx.fillText(line.txt, x, y + indx * 350);
         gCtx.strokeText(line.txt, x, y + indx * 500);
 
     });
 }
+function memeController() {
 
+
+}
+
+saveMeme()
+function saveMeme() {
+
+    var imgContent = gCanvas.toDataURL('image/jpeg')
+    console.log('imgContent', imgContent);
+    addMemeToArr(imgContent)
+
+}
+
+
+// function textSize() {
+//     var meme = getMeme();
+//     meme.line.fontSize++
+//     // var font = document.getElementById('b').style.fontSize;            
+//     // font++;
+//     return meme.line.fontSize + 'px'
+// }
 
 
 function onText(elTxt, elColor) {
@@ -156,7 +182,6 @@ function openMoreModal() {
     var elOpen = document.querySelector('.share-modal');
     var elClose = document.querySelector('.close-more');
     var download = document.querySelector('.download');
-    var inputs = document.querySelector('.inputs');
     download.style.display = 'block'
     elOpen.style.display = 'block'
     elClose.style.display = 'block'
@@ -188,15 +213,6 @@ function getRandomMeme() {
 }
 
 
-function getRandomImg() {
-
-    for (var i = 0; i < gImgs.length; i++) {
-        var img = gImgs[Math.floor(Math.random() * 18)];
-        // console.log('img', img);
-    }
-    return img
-
-}
 function getRandomSenten() {
 
     for (var i = 0; i < memesSentences.length; i++) {
@@ -236,3 +252,15 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+
+
+
+// function getRandomImg() {
+
+//     for (var i = 0; i < gImgs.length; i++) {
+//         var img = gImgs[Math.floor(Math.random() * 18)];
+//         // console.log('img', img);
+//     }
+//     return img
+
+// }

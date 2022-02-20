@@ -30,8 +30,8 @@
                 >Editor</a
               >
             </li>
-            <li onclick="onSortChange('name')">
-              <a href="#">About</a>
+            <li>
+              <a href="#">Your Meme </a>
             </li>
           </ul>
         </nav>
@@ -83,14 +83,14 @@
       >
     </div>
 
-    <button class="btn-share" onclick="uploadImg()">
+    <button class="btn-editor btn-share" onclick="uploadImg()">
       Share
     </button>
       <p class="user-msg"></p>
       <div class="share-container"></div>
-      <button onclick=" closeMoreModal()" class="close-more">Close</button>
+      <button onclick=" closeMoreModal()" class="btn-editor close-more">Close</button>
   </div>
-  <button onclick="newMeme(this)" class="flexible">i'm flexible</button>
+  <button onclick="newMeme(this)" class="btn-editor ">i'm flexible</button>
     <section
       class="editor flex "
     >
@@ -105,10 +105,7 @@
       ></canvas>
     </div>
   
-      <section class="editor-tools grid main-layou">
-   
-      
-
+      <section class="editor-tools ">
         <input
           type="text"
           name="texts"
@@ -127,13 +124,19 @@
           
           onclick="getColor(this)"
         /></div>
+
+        <div class="btn-continer">
+<button class="btn-editor" onclick="saveMeme()">Save</button>
+        <!-- <button onclick="textSize()">+</button> -->
         <!-- <button class="emoji" onclick="drawEmoji() ">😃</button> -->
-        <button onclick="onSwitch(this)" class="switch">
+        <button onclick="onSwitch(this)" class="btn-editor switch">
           ⇅
         </button>
-        <button onclick="openMoreModal()" class="open-more">More</button>
-       <button class="delete" onclick="clearCanvas()"><img src="meme-imgs/trash-solid (1).svg"></button>
-          <button class="close"  onclick="closeEditor(this)">Close</button>
+        <button   onclick="openMoreModal()" class="btn-editor open-more">More</button>
+        <button   class="btn-editor close"  onclick="closeEditor(this)">Close</button>
+      </div>
+       <button    class="btn-editor delete" onclick="clearCanvas()"><img src="meme-imgs/trash-solid (1).svg"></button>
+         
           
       </section>
     </div>
@@ -143,6 +146,7 @@
     </section>
 
     <footer class="main-layou">©Meme Generator</footer>
+    <script src="/js/storage.servise.js"></script>
     <script src="js/memesSentences.js"></script>
     <script src="js/meme-service.js"></script>
     <script src="js/meme-controller.js"></script>

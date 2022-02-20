@@ -1,7 +1,8 @@
 'use strict'
 
+const STORAGE_KEY = 'memeDB';
 var gMeme;
-
+var gSavedMemes;
 
 
 gMeme = {
@@ -22,7 +23,8 @@ gMeme = {
             size: 40,
             align: 'center',
             color: 'black',
-            font: '40px'
+            font: '40px',
+            fontSize: '40px'
         }
     ]
 }
@@ -52,5 +54,14 @@ function getColor() {
 }
 
 
+function _saveMemesToStorage() {
+    saveToStorage(STORAGE_KEY, gMeme)
+}
 
 
+function addMemeToArr(img) {
+    gSavedMemes = loadFromStorage(STORAGE_KEY);
+    if (!gSavedMemes || !gSavedMemes.length) gSavedMemes = [];
+    gSavedMemes.push(img);
+    _saveMemesToStorage();
+}
